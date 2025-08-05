@@ -5034,5 +5034,3535 @@ Continuarei com o resto do código. Gostaria que eu prossiga com as próximas se
 ```
 
 **Linha 1010**: Fecha interface do jogo
+## SEÇÃO 34: TÍTULO E GRADE DE PROFESSORES (Linhas 1012-1025)
 
-.
+```html
+            <div style="text-align: center; margin: 2rem 0;">
+```
+
+**Linha 1012**: Container centralizado com margem vertical
+
+```html
+                <h2 style="font-size: 3rem; color: #ff0080; margin-bottom: 1rem; font-family: 'Cinzel', serif;">
+                    ESCOLHA SEU DESTINO
+                </h2>
+```
+
+**Linha 1013-1015**: Título da seleção com estilo inline (fonte grande, cor rosa, fonte Cinzel)
+
+```html
+                <p style="font-size: 1.2rem; color: #ccc; margin-bottom: 2rem;">
+                    Cada professor é um mestre supremo em sua arte. Prepare-se para o confronto definitivo!
+                </p>
+```
+
+**Linha 1016-1018**: Descrição explicativa com estilo inline
+
+```html
+            </div>
+```
+
+**Linha 1019**: Fecha container do título
+
+```html
+            <div class="professor-grid" id="professorGrid">
+            </div>
+```
+
+**Linha 1021-1022**: Grade de professores (preenchida dinamicamente via JavaScript)
+
+```html
+        </div>
+```
+
+**Linha 1023**: Fecha tela de seleção de professores
+
+## SEÇÃO 35: ARENA DE BATALHA (Linhas 1025-1040)
+
+```html
+        <div id="battleArena" class="battle-arena">
+```
+
+**Linha 1025**: Container da arena de batalha
+
+```html
+            <button class="back-btn" onclick="fleeBattle()">💨 FUGIR</button>
+```
+
+**Linha 1026**: Botão para fugir da batalha
+
+```html
+            <div class="combo-counter" id="comboCounter" style="display: none;">
+                COMBO: <span id="comboValue">0</span>x
+            </div>
+```
+
+**Linha 1027-1029**: Contador de combo (inicialmente oculto)
+
+```html
+            <div class="battle-layout">
+```
+
+**Linha 1031**: Layout da batalha usando CSS Grid
+
+```html
+                <div class="professor-boss" id="professorBoss">
+```
+
+**Linha 1032**: Container do professor boss
+
+```html
+                    <div class="boss-avatar" id="bossAvatar">👨‍🏫</div>
+```
+
+**Linha 1033**: Avatar do boss (emoji padrão de professor)
+
+```html
+                    <div class="boss-name" id="bossName">MESTRE SUPREMO</div>
+```
+
+**Linha 1034**: Nome do boss (atualizado dinamicamente)
+
+```html
+                    <div class="boss-subject" id="bossSubject">CONHECIMENTO ABSOLUTO</div>
+```
+
+**Linha 1035**: Matéria do boss (atualizada dinamicamente)
+
+```html
+                    <div class="hp-container">
+```
+
+**Linha 1036**: Container da barra de HP
+
+```html
+                        <div class="hp-bar">
+```
+
+**Linha 1037**: Barra de HP
+
+```html
+                            <div class="hp-fill" id="bossHPFill" style="width: 100%;"></div>
+```
+
+**Linha 1038**: Preenchimento da barra de HP (100% inicial)
+
+```html
+                            <div class="hp-text" id="bossHPText">1000/1000</div>
+```
+
+**Linha 1039**: Texto mostrando HP atual/máximo
+
+```html
+                        </div>
+```
+
+**Linha 1040**: Fecha barra de HP
+
+```html
+                    </div>
+```
+
+**Linha 1041**: Fecha container de HP
+
+```html
+                </div>
+```
+
+**Linha 1042**: Fecha container do boss
+
+## SEÇÃO 36: DIÁLOGO E ÁREA DO JOGADOR (Linhas 1044-1070)
+
+```html
+                <div class="dialogue-container" id="dialogueContainer">
+```
+
+**Linha 1044**: Container do diálogo
+
+```html
+                    <div class="dialogue-text" id="dialogueText">
+                        Prepare-se para enfrentar o conhecimento supremo...
+                    </div>
+```
+
+**Linha 1045-1047**: Texto do diálogo (atualizado dinamicamente)
+
+```html
+                    <button class="menu-btn" onclick="startChallenge()" id="startChallengeBtn">⚔️ ACEITAR O DESTINO</button>
+```
+
+**Linha 1048**: Botão para iniciar o desafio
+
+```html
+                </div>
+```
+
+**Linha 1049**: Fecha container do diálogo
+
+```html
+                <div class="player-area">
+```
+
+**Linha 1051**: Área do jogador
+
+```html
+                    <div class="player-avatar">🎓</div>
+```
+
+**Linha 1052**: Avatar do jogador (emoji de formatura)
+
+```html
+                    <div style="font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem; color: #00ffff;">ESTUDANTE SUPREMO</div>
+```
+
+**Linha 1053**: Título do jogador com estilo inline
+
+```html
+                    <div class="hp-container">
+```
+
+**Linha 1054**: Container da barra de HP do jogador
+
+```html
+                        <div class="hp-bar">
+```
+
+**Linha 1055**: Barra de HP do jogador
+
+```html
+                            <div class="hp-fill" id="playerHPFill" style="width: 100%;"></div>
+```
+
+**Linha 1056**: Preenchimento da barra de HP do jogador
+
+```html
+                            <div class="hp-text" id="playerHPText">500/500</div>
+```
+
+**Linha 1057**: Texto do HP do jogador
+
+```html
+                        </div>
+```
+
+**Linha 1058**: Fecha barra de HP
+
+```html
+                    </div>
+```
+
+**Linha 1059**: Fecha container de HP
+
+```html
+                    <div style="color: #ffff00; font-weight: bold; margin-top: 1rem;" id="playerLevelDisplay">NÍVEL 1</div>
+```
+
+**Linha 1060**: Display do nível do jogador
+
+```html
+                </div>
+```
+
+**Linha 1061**: Fecha área do jogador
+
+## SEÇÃO 37: ARENA DE DESAFIO (Linhas 1063-1080)
+
+```html
+                <div class="challenge-arena" id="challengeArena">
+```
+
+**Linha 1063**: Arena onde aparecem os desafios
+
+```html
+                    <div class="challenge-title" id="challengeTitle">DESAFIO SUPREMO</div>
+```
+
+**Linha 1064**: Título do desafio
+
+```html
+                    <div class="challenge-timer-container">
+```
+
+**Linha 1065**: Container do timer
+
+```html
+                        <div class="challenge-timer">
+```
+
+**Linha 1066**: Timer visual
+
+```html
+                            <div class="timer-fill" id="timerFill" style="width: 100%;"></div>
+```
+
+**Linha 1067**: Preenchimento do timer
+
+```html
+                        </div>
+```
+
+**Linha 1068**: Fecha timer
+
+```html
+                        <div class="timer-text" id="timerText">Tempo: 30s</div>
+```
+
+**Linha 1069**: Texto do tempo restante
+
+```html
+                    </div>
+```
+
+**Linha 1070**: Fecha container do timer
+
+```html
+                    <div id="challengeContent">
+                    </div>
+```
+
+**Linha 1071-1072**: Container do conteúdo do desafio (preenchido dinamicamente)
+
+```html
+                </div>
+```
+
+**Linha 1073**: Fecha arena de desafio
+
+```html
+            </div>
+```
+
+**Linha 1074**: Fecha layout da batalha
+
+```html
+        </div>
+```
+
+**Linha 1075**: Fecha arena de batalha
+
+## SEÇÃO 38: TELA DE RESULTADO (Linhas 1077-1100)
+
+```html
+        <div class="result-screen" id="resultScreen">
+```
+
+**Linha 1077**: Tela de resultado (overlay)
+
+```html
+            <div class="result-content" id="resultContent">
+```
+
+**Linha 1078**: Conteúdo da tela de resultado
+
+```html
+                <div class="result-title" id="resultTitle">VITÓRIA ÉPICA!</div>
+```
+
+**Linha 1079**: Título do resultado
+
+```html
+                <div class="result-message" id="resultMessage">
+                    Você provou ser digno do conhecimento supremo!
+                </div>
+```
+
+**Linha 1080-1082**: Mensagem do resultado
+
+```html
+                <div class="result-stats">
+```
+
+**Linha 1083**: Container das estatísticas finais
+
+```html
+                    <div class="result-stat">
+                        <span class="result-stat-value" id="finalScore">0</span>
+                        <span class="result-stat-label">Pontuação Final</span>
+                    </div>
+```
+
+**Linha 1084-1087**: Estatística da pontuação final
+
+```html
+                    <div class="result-stat">
+                        <span class="result-stat-value" id="finalCombo">0</span>
+                        <span class="result-stat-label">Combo Máximo</span>
+                    </div>
+```
+
+**Linha 1088-1091**: Estatística do combo máximo
+
+```html
+                    <div class="result-stat">
+                        <span class="result-stat-value" id="finalTime">0</span>
+                        <span class="result-stat-label">Tempo Restante</span>
+                    </div>
+```
+
+**Linha 1092-1095**: Estatística do tempo restante
+
+```html
+                </div>
+```
+
+**Linha 1096**: Fecha container das estatísticas
+
+```html
+                <button class="menu-btn" onclick="continueJourney()">CONTINUAR JORNADA</button>
+```
+
+**Linha 1097**: Botão para continuar após o resultado
+
+```html
+            </div>
+```
+
+**Linha 1098**: Fecha conteúdo do resultado
+
+```html
+        </div>
+```
+
+**Linha 1099**: Fecha tela de resultado
+
+```html
+    </div>
+```
+
+**Linha 1100**: Fecha container principal do jogo
+
+## SEÇÃO 39: INÍCIO DO JAVASCRIPT - ESTADO DO JOGO (Linhas 1102-1125)
+
+```html
+    <script>
+```
+
+**Linha 1102**: Inicia seção JavaScript
+
+```javascript
+        let gameState = {
+```
+
+**Linha 1103**: Objeto que armazena todo o estado do jogo
+
+```javascript
+            playerLevel: 1,
+```
+
+**Linha 1104**: Nível inicial do jogador
+
+```javascript
+            playerPower: 100,
+```
+
+**Linha 1105**: Poder inicial do jogador
+
+```javascript
+            playerHP: 500,
+```
+
+**Linha 1106**: HP atual do jogador
+
+```javascript
+            playerMaxHP: 500,
+```
+
+**Linha 1107**: HP máximo do jogador
+
+```javascript
+            victories: [],
+```
+
+**Linha 1108**: Array com IDs dos professores derrotados
+
+```javascript
+            defeats: 0,
+```
+
+**Linha 1109**: Contador de derrotas
+
+```javascript
+            maxCombo: 0,
+```
+
+**Linha 1110**: Maior combo alcançado
+
+```javascript
+            currentBoss: null,
+```
+
+**Linha 1111**: Professor atual em batalha
+
+```javascript
+            bossHP: 1000,
+```
+
+**Linha 1112**: HP atual do boss
+
+```javascript
+            bossMaxHP: 1000,
+```
+
+**Linha 1113**: HP máximo do boss
+
+```javascript
+            challengeTimer: null,
+```
+
+**Linha 1114**: Referência do timer do desafio
+
+```javascript
+            timeLeft: 30,
+```
+
+**Linha 1115**: Tempo restante no desafio
+
+```javascript
+            currentChallenge: null,
+```
+
+**Linha 1116**: Desafio atual
+
+```javascript
+            isInBattle: false,
+```
+
+**Linha 1117**: Flag indicando se está em batalha
+
+```javascript
+            currentCombo: 0,
+```
+
+**Linha 1118**: Combo atual
+
+```javascript
+            totalScore: 0,
+```
+
+**Linha 1119**: Pontuação total acumulada
+
+```javascript
+            battleStats: {
+                questionsAnswered: 0,
+                correctAnswers: 0,
+                criticalHits: 0,
+                timeBonus: 0
+            }
+```
+
+**Linha 1120-1125**: Estatísticas da batalha atual
+
+```javascript
+        };
+```
+
+**Linha 1126**: Fecha objeto gameState
+
+## SEÇÃO 40: DADOS DOS PROFESSORES - MAZIM (Linhas 1128-1165)
+
+```javascript
+        const professors = [
+```
+
+**Linha 1128**: Array constante com dados de todos os professores
+
+```javascript
+            {
+                id: 1, name: "Mazim", subject: "Português", emoji: "📚",
+```
+
+**Linha 1129**: Professor 1 - Mazim de Português
+
+```javascript
+                color: "#8B5CF6", hp: 1200, difficulty: 3, powerLevel: 8500,
+```
+
+**Linha 1130**: Cor roxa, 1200 HP, dificuldade 3, poder 8500
+
+```javascript
+                description: "Mestre das palavras e guardião da literatura brasileira",
+```
+
+**Linha 1131**: Descrição do professor
+
+```javascript
+                phrases: [
+                    "As palavras são lâminas afiadas que cortam a ignorância!",
+                    "Sua ortografia é uma ofensa aos grandes escritores!",
+                    "Cada vírgula mal colocada será punida com dor intelectual!",
+                    "Vou te fazer conjugar verbos até sua alma implorar por misericórdia!"
+                ],
+```
+
+**Linha 1132-1137**: Frases intimidadoras do professor
+
+```javascript
+                challenges: [
+                    {
+                        type: "grammar",
+                        question: "Complete corretamente: 'Vou ___ casa da vovó'",
+                        options: ["a", "à", "há", "ah"],
+                        correct: 1,
+                        timeLimit: 15,
+                        difficulty: "hard"
+                    },
+```
+
+**Linha 1138-1146**: Primeiro desafio - gramática (crase)
+
+```javascript
+                    {
+                        type: "literature",
+                        question: "Quem escreveu 'O Cortiço'?",
+                        options: ["Aluísio Azevedo", "Machado de Assis", "José de Alencar", "Lima Barreto"],
+                        correct: 0,
+                        timeLimit: 20,
+                        difficulty: "extreme"
+                    },
+```
+
+**Linha 1147-1154**: Segundo desafio - literatura
+
+```javascript
+                    {
+                        type: "syntax",
+                        question: "Identifique o sujeito: 'Chegaram os convidados'",
+                        options: ["Chegaram", "os convidados", "convidados", "Não há sujeito"],
+                        correct: 1,
+                        timeLimit: 25,
+                        difficulty: "extreme"
+                    },
+```
+
+**Linha 1155-1162**: Terceiro desafio - sintaxe
+
+```javascript
+                    {
+                        type: "grammar",
+                        question: "Qual a forma correta: 'Há ___ anos não o vejo'",
+                        options: ["dois", "dous", "2", "II"],
+                        correct: 0,
+                        timeLimit: 18,
+                        difficulty: "hard"
+                    },
+```
+
+**Linha 1163-1170**: Quarto desafio - gramática
+
+```javascript
+                    {
+                        type: "literature",
+                        question: "Qual movimento literário pertence Machado de Assis?",
+                        options: ["Romantismo", "Realismo", "Modernismo", "Barroco"],
+                        correct: 1,
+                        timeLimit: 22,
+                        difficulty: "extreme"
+                    }
+                ]
+            },
+```
+
+**Linha 1171-1178**: Quinto desafio - literatura, fecha dados do Mazim
+
+## SEÇÃO 41: PROFESSOR FERNANDO - MATEMÁTICA I (Linhas 1179-1220)
+
+```javascript
+            {
+                id: 2, name: "Fernando", subject: "Matemática I", emoji: "🔢",
+```
+
+**Linha 1179**: Professor 2 - Fernando de Matemática I
+
+```javascript
+                color: "#3B82F6", hp: 1400, difficulty: 4, powerLevel: 9200,
+```
+
+**Linha 1180**: Cor azul, 1400 HP, dificuldade 4, poder 9200
+
+```javascript
+                description: "Senhor dos números e mestre das equações fundamentais",
+```
+
+**Linha 1181**: Descrição do professor
+
+```javascript
+                phrases: [
+                    "Os números não mentem, e eles dizem que você vai perder!",
+                    "Vou calcular exatamente quanto você vai sofrer: INFINITO!",
+                    "Sua ignorância matemática é uma constante... ZERO!",
+                    "Prepare-se para uma lição de álgebra que doerá até na alma!"
+                ],
+```
+
+**Linha 1182-1187**: Frases intimidadoras matemáticas
+
+```javascript
+                challenges: [
+                    {
+                        type: "calculation",
+                        question: "Resolva: 23 × 17 + 89 - 45",
+                        answer: 435,
+                        timeLimit: 20,
+                        difficulty: "hard"
+                    },
+```
+
+**Linha 1188-1195**: Primeiro desafio - cálculo (resposta numérica)
+
+```javascript
+                    {
+                        type: "algebra",
+                        question: "Se 4x + 12 = 36, qual o valor de x?",
+                        answer: 6,
+                        timeLimit: 25,
+                        difficulty: "extreme"
+                    },
+```
+
+**Linha 1196-1202**: Segundo desafio - álgebra
+
+```javascript
+                    {
+                        type: "geometry",
+                        question: "Área de um círculo com raio 6 (use π = 3.14)",
+                        answer: 113.04,
+                        tolerance: 2,
+                        timeLimit: 30,
+                        difficulty: "extreme"
+                    },
+```
+
+**Linha 1203-1210**: Terceiro desafio - geometria (com tolerância para aproximação)
+
+```javascript
+                    {
+                        type: "calculation",
+                        question: "Quanto é 169 ÷ 13?",
+                        answer: 13,
+                        timeLimit: 12,
+                        difficulty: "medium"
+                    },
+```
+
+**Linha 1211-1217**: Quarto desafio - divisão
+
+```javascript
+                    {
+                        type: "algebra",
+                        question: "Se 3x - 8 = 19, qual o valor de x?",
+                        answer: 9,
+                        timeLimit: 20,
+                        difficulty: "hard"
+                    }
+                ]
+            },
+```
+
+**Linha 1218-1224**: Quinto desafio - álgebra, fecha dados do Fernando
+
+## SEÇÃO 42: PROFESSOR PEIXOTO - MATEMÁTICA II (Linhas 1225-1260)
+
+```javascript
+            {
+                id: 3, name: "Peixoto", subject: "Matemática II", emoji: "📐",
+```
+
+**Linha 1225**: Professor 3 - Peixoto de Matemática II
+
+```javascript
+                color: "#1E40AF", hp: 1600, difficulty: 5, powerLevel: 9800,
+```
+
+**Linha 1226**: Cor azul escuro, 1600 HP, dificuldade 5, poder 9800
+
+```javascript
+                description: "Guardião supremo da matemática avançada e senhor do cálculo",
+```
+
+**Linha 1227**: Descrição do professor
+
+```javascript
+                phrases: [
+                    "Matemática avançada é meu reino! Você é apenas um zero à esquerda!",
+                    "Vou te integrar... na derrota absoluta!",
+                    "Suas derivadas de conhecimento tendem a MENOS INFINITO!",
+                    "Prepare-se para limites infinitos de sofrimento matemático!"
+                ],
+```
+
+**Linha 1228-1233**: Frases com termos de cálculo
+
+```javascript
+                challenges: [
+                    {
+                        type: "calculus",
+                        question: "Derivada de x³ + 2x² - 5x + 3",
+                        options: ["3x² + 4x - 5", "x² + 4x - 5", "3x² + 2x - 5", "3x² + 4x + 5"],
+                        correct: 0,
+                        timeLimit: 35,
+                        difficulty: "extreme"
+                    },
+```
+
+**Linha 1234-1242**: Primeiro desafio - cálculo diferencial
+
+```javascript
+                    {
+                        type: "trigonometry",
+                        question: "sen²(x) + cos²(x) = ?",
+                        options: ["0", "1", "2", "π"],
+                        correct: 1,
+                        timeLimit: 20,
+                        difficulty: "hard"
+                    },
+```
+
+**Linha 1243-1250**: Segundo desafio - identidade trigonométrica
+
+```javascript
+                    {
+                        type: "integration",
+                        question: "∫(2x + 3)dx = ?",
+                        options: ["x² + 3x + C", "2x² + 3x + C", "x² + 3x", "2x + 3"],
+                        correct: 0,
+                        timeLimit: 40,
+                        difficulty: "extreme"
+                    },
+```
+
+**Linha 1251-1258**: Terceiro desafio - cálculo integral
+
+```javascript
+                    {
+                        type: "limits",
+                        question: "lim(x→0) (sen x)/x = ?",
+                        options: ["0", "1", "∞", "Não existe"],
+                        correct: 1,
+                        timeLimit: 30,
+                        difficulty: "extreme"
+                    }
+                ]
+            },
+```
+
+**Linha 1259-1266**: Quarto desafio - limites, fecha dados do Peixoto
+
+## SEÇÃO 43: PROFESSORES IRINEU, VICTOR, ANDRÉ (Linhas 1267-1350)
+
+```javascript
+            {
+                id: 4, name: "Irineu", subject: "Biologia", emoji: "🧬",
+                color: "#10B981", hp: 1300, difficulty: 4, powerLevel: 8800,
+                description: "Mestre da vida e guardião dos segredos celulares",
+```
+
+**Linha 1267-1270**: Professor 4 - Irineu de Biologia
+
+```javascript
+                phrases: [
+                    "A evolução selecionou você para a extinção!",
+                    "Vou dissecar seu conhecimento célula por célula!",
+                    "Sua ignorância biológica é uma mutação letal!",
+                    "Prepare-se para uma lição de anatomia... da DOR!"
+                ],
+```
+
+**Linha 1271-1276**: Frases biológicas intimidadoras
+
+```javascript
+                challenges: [
+                    {
+                        type: "cell_biology",
+                        question: "Quantos cromossomos tem uma célula humana normal?",
+                        options: ["23", "44", "46", "48"],
+                        correct: 2,
+                        timeLimit: 20,
+                        difficulty: "hard"
+                    },
+```
+
+**Linha 1277-1284**: Desafio de biologia celular
+
+```javascript
+            {
+                id: 5, name: "Victor", subject: "História", emoji: "🏛️",
+                color: "#F59E0B", hp: 1500, difficulty: 4, powerLevel: 9100,
+                description: "Senhor do tempo e guardião dos segredos do passado",
+```
+
+**Linha 1300-1303**: Professor 5 - Victor de História
+
+```javascript
+            {
+                id: 6, name: "André", subject: "Sociologia", emoji: "👥",
+                color: "#EF4444", hp: 1200, difficulty: 3, powerLevel: 8300,
+                description: "Mestre da sociedade e analista supremo do comportamento humano",
+```
+
+**Linha 1330-1333**: Professor 6 - André de Sociologia
+
+## SEÇÃO 44: PROFESSORES ANDREANE, PEDRO RICARDO, CARLOS (Linhas 1351-1450)
+
+```javascript
+            {
+                id: 7, name: "Andreane", subject: "Química", emoji: "⚗️",
+                color: "#06B6D4", hp: 1450, difficulty: 5, powerLevel: 9500,
+                description: "Alquimista suprema e senhora das reações moleculares",
+```
+
+**Linha 1351-1354**: Professor 7 - Andreane de Química
+
+```javascript
+                phrases: [
+                    "Vamos fazer uma reação... EXPLOSIVA E LETAL!",
+                    "Sua ignorância química será catalisada pela DOR PURA!",
+                    "Vou balancear esta equação... com sua DESTRUIÇÃO!",
+                    "Prepare-se para uma ligação iônica... com o SOFRIMENTO!"
+                ],
+```
+
+**Linha 1355-1360**: Frases químicas intimidadoras
+
+```javascript
+            {
+                id: 8, name: "Pedro Ricardo", subject: "Geografia", emoji: "🌍",
+                color: "#84CC16", hp: 1350, difficulty: 4, powerLevel: 8700,
+                description: "Navegador supremo e mestre dos continentes e oceanos",
+```
+
+**Linha 1380-1383**: Professor 8 - Pedro Ricardo de Geografia
+
+```javascript
+            {
+                id: 9, name: "Carlos", subject: "Física", emoji: "⚡",
+                color: "#F97316", hp: 1700, difficulty: 5, powerLevel: 10500,
+                description: "Senhor das leis universais e mestre da energia cósmica",
+```
+
+**Linha 1410-1413**: Professor 9 - Carlos de Física (HP mais alto)
+
+```javascript
+                phrases: [
+                    "As leis da física são ABSOLUTAS... assim como sua DERROTA!",
+                    "Vou te mostrar a verdadeira força da gravidade... te ESMAGANDO!",
+                    "Sua energia cinética tende a ZERO ABSOLUTO!",
+                    "Prepare-se para uma aceleração... da DOR INFINITA!"
+                ],
+```
+
+**Linha 1414-1419**: Frases físicas intimidadoras
+
+## SEÇÃO 45: PROFESSORES DE FILOSOFIA E EDUCAÇÃO FÍSICA (Linhas 1451-1550)
+
+```javascript
+            {
+                id: 10, name: "Gildeon", subject: "Filosofia I", emoji: "🤔",
+                color: "#7C3AED", hp: 1250, difficulty: 4, powerLevel: 8600,
+                description: "Pensador supremo e guardião da sabedoria ancestral",
+```
+
+**Linha 1451-1454**: Professor 10 - Gildeon de Filosofia I
+
+```javascript
+            {
+                id: 11, name: "Denisfran", subject: "Filosofia II", emoji: "💭",
+                color: "#5B21B6", hp: 1400, difficulty: 5, powerLevel: 9300,
+                description: "Mestre do pensamento complexo e senhor da dialética suprema",
+```
+
+**Linha 1480-1483**: Professor 11 - Denisfran de Filosofia II
+
+```javascript
+            {
+                id: 12, name: "Léo", subject: "Educação Física I", emoji: "💪",
+                color: "#DC2626", hp: 1800, difficulty: 4, powerLevel: 10200,
+                description: "Gladiador supremo e mestre do condicionamento físico extremo",
+```
+
+**Linha 1510-1513**: Professor 12 - Léo de Educação Física I (HP muito alto)
+
+```javascript
+            {
+                id: 13, name: "Aurine", subject: "Educação Física II", emoji: "🏃‍♀️",
+                color: "#BE185D", hp: 1600, difficulty: 4, powerLevel: 9700,
+                description: "Amazona suprema e mestra da performance atlética máxima",
+```
+
+**Linha 1540-1543**: Professor 13 - Aurine de Educação Física II
+
+## SEÇÃO 46: PROFESSORES FINAIS (Linhas 1551-1600)
+
+```javascript
+            {
+                id: 14, name: "Vilarinho", subject: "Música/Artes", emoji: "🎵",
+                color: "#7C2D12", hp: 1300, difficulty: 3, powerLevel: 8900,
+                description: "Maestro supremo e guardião da expressão artística universal",
+```
+
+**Linha 1551-1554**: Professor 14 - Vilarinho de Música/Artes
+
+```javascript
+            {
+                id: 15, name: "Jayslenne", subject: "Espanhol", emoji: "🇪🇸",
+                color: "#DC2626", hp: 1500, difficulty: 4, powerLevel: 9600,
+                description: "Señora suprema del idioma español y guardiana de la cultura hispánica",
+```
+
+**Linha 1580-1583**: Professor 15 - Jayslenne de Espanhol (último professor)
+
+```javascript
+                phrases: [
+                    "¡Voy a enseñarte español... a través del DOLOR INFINITO!",
+                    "Tu pronunciación es una ofensa a toda Hispanoamérica!",
+                    "¡Prepárate para conjugar verbos hasta que tu alma GRITE!",
+                    "Voy a hacerte hablar español... ¡o MORIR en el intento!"
+                ],
+```
+
+**Linha 1584-1589**: Frases em espanhol intimidadoras
+
+```javascript
+        ];
+```
+
+**Linha 1600**: Fecha array de professores
+
+## SEÇÃO 47: FUNÇÕES DE INICIALIZAÇÃO (Linhas 1602-1620)
+
+```javascript
+        function init() {
+```
+
+**Linha 1602**: Função principal de inicialização
+
+```javascript
+            createParticleSystem();
+```
+
+**Linha 1603**: Cria sistema de partículas
+
+```javascript
+            loadGameState();
+```
+
+**Linha 1604**: Carrega estado salvo do localStorage
+
+```javascript
+            generateProfessorGrid();
+```
+
+**Linha 1605**: Gera grade de professores
+
+```javascript
+            updateUI();
+```
+
+**Linha 1606**: Atualiza interface
+
+```javascript
+            setInterval(createRandomParticle, 500);
+```
+
+**Linha 1607**: Cria partícula a cada 500ms
+
+```javascript
+        }
+```
+
+**Linha 1608**: Fecha função init
+
+```javascript
+        function createParticleSystem() {
+```
+
+**Linha 1610**: Função para criar sistema de partículas
+
+```javascript
+            const particleSystem = document.getElementById('particleSystem');
+```
+
+**Linha 1611**: Obtém elemento do sistema de partículas
+
+```javascript
+            for (let i = 0; i < 50; i++) {
+```
+
+**Linha 1612**: Loop para criar 50 partículas iniciais
+
+```javascript
+                createParticle(particleSystem);
+```
+
+**Linha 1613**: Cria cada partícula
+
+```javascript
+            }
+```
+
+**Linha 1614**: Fecha loop
+
+```javascript
+        }
+```
+
+**Linha 1615**: Fecha função createParticleSystem
+
+## SEÇÃO 48: CRIAÇÃO DE PARTÍCULAS (Linhas 1617-1650)
+
+```javascript
+        function createParticle(container) {
+```
+
+**Linha 1617**: Função para criar uma partícula individual
+
+```javascript
+            const particle = document.createElement('div');
+```
+
+**Linha 1618**: Cria elemento div para a partícula
+
+```javascript
+            particle.className = 'particle';
+```
+
+**Linha 1619**: Aplica classe CSS particle
+
+```javascript
+            particle.style.width = Math.random() * 8 + 4 + 'px';
+```
+
+**Linha 1620**: Largura aleatória entre 4-12px
+
+```javascript
+            particle.style.height = particle.style.width;
+```
+
+**Linha 1621**: Altura igual à largura (quadrado)
+
+```javascript
+            particle.style.left = Math.random() * 100 + '%';
+```
+
+**Linha 1622**: Posição horizontal aleatória
+
+```javascript
+            particle.style.animationDelay = Math.random() * 15 + 's';
+```
+
+**Linha 1623**: Delay aleatório da animação
+
+```javascript
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+```
+
+**Linha 1624**: Duração aleatória entre 10-20s
+
+```javascript
+            const colors = ['#ff0080', '#8000ff', '#0080ff', '#00ff80', '#ff8000'];
+```
+
+**Linha 1626**: Array de cores possíveis
+
+```javascript
+            const color = colors[Math.floor(Math.random() * colors.length)];
+```
+
+**Linha 1627**: Seleciona cor aleatória
+
+```javascript
+            particle.style.background = color;
+```
+
+**Linha 1628**: Aplica cor de fundo
+
+```javascript
+            particle.style.boxShadow = `0 0 ${Math.random() * 15 + 5}px ${color}`;
+```
+
+**Linha 1629**: Aplica sombra brilhante da mesma cor
+
+```javascript
+            container.appendChild(particle);
+```
+
+**Linha 1631**: Adiciona partícula ao container
+
+```javascript
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                }
+            }, 15000);
+```
+
+**Linha 1633-1637**: Remove partícula após 15 segundos
+
+```javascript
+        }
+```
+
+**Linha 1638**: Fecha função createParticle
+
+## SEÇÃO 49: NAVEGAÇÃO ENTRE TELAS (Linhas 1640-1670)
+
+```javascript
+        function createRandomParticle() {
+```
+
+**Linha 1640**: Função para criar partículas aleatórias continuamente
+
+```javascript
+            const particleSystem = document.getElementById('particleSystem');
+```
+
+**Linha 1641**: Obtém sistema de partículas
+
+```javascript
+            if (particleSystem.children.length < 80) {
+```
+
+**Linha 1642**: Verifica se há menos de 80 partículas
+
+```javascript
+                createParticle(particleSystem);
+```
+
+**Linha 1643**: Cria nova partícula
+
+```javascript
+            }
+```
+
+**Linha 1644**: Fecha condição
+
+```javascript
+        }
+```
+
+**Linha 1645**: Fecha função createRandomParticle
+
+```javascript
+        function showMainMenu() {
+```
+
+**Linha 1647**: Função para mostrar menu principal
+
+```javascript
+            document.getElementById('mainMenu').style.display = 'flex';
+```
+
+**Linha 1648**: Mostra menu principal
+
+```javascript
+            document.getElementById('professorSelect').style.display = 'none';
+```
+
+**Linha 1649**: Esconde seleção de professores
+
+```javascript
+            document.getElementById('battleArena').style.display = 'none';
+```
+
+**Linha 1650**: Esconde arena de batalha
+
+```javascript
+            document.getElementById('resultScreen').style.display = 'none';
+```
+
+**Linha 1651**: Esconde tela de resultado
+
+```javascript
+        }
+```
+
+**Linha 1652**: Fecha função showMainMenu
+
+```javascript
+        function showProfessorSelect() {
+```
+
+**Linha 1654**: Função para mostrar seleção de professores
+
+```javascript
+            document.getElementById('mainMenu').style.display = 'none';
+```
+
+**Linha 1655**: Esconde menu principal
+
+```javascript
+            document.getElementById('professorSelect').style.display = 'block';
+```
+
+**Linha 1656**: Mostra seleção de professores
+
+```javascript
+            document.getElementById('battleArena').style.display = 'none';
+```
+
+**Linha 1657**: Esconde arena de batalha
+
+```javascript
+            generateProfessorGrid();
+```
+
+**Linha 1658**: Regenera grade de professores
+
+```javascript
+            updateUI();
+```
+
+**Linha 1659**: Atualiza interface
+
+```javascript
+        }
+```
+
+**Linha 1660**: Fecha função showProfessorSelect
+
+## SEÇÃO 50: GERAÇÃO DA GRADE DE PROFESSORES (Linhas 1662-1720)
+
+```javascript
+        function generateProfessorGrid() {
+```
+
+**Linha 1662**: Função para gerar grade de professores
+
+```javascript
+            const grid = document.getElementById('professorGrid');
+```
+
+**Linha 1663**: Obtém elemento da grade
+
+```javascript
+            grid.innerHTML = '';
+```
+
+**Linha 1664**: Limpa conteúdo anterior
+
+```javascript
+            professors.forEach(professor => {
+```
+
+**Linha 1666**: Loop através de todos os professores
+
+```javascript
+                const isUnlocked = isProfessorUnlocked(professor);
+```
+
+**Linha 1667**: Verifica se professor está desbloqueado
+
+```javascript
+                const isCompleted = gameState.victories.includes(professor.id);
+```
+
+**Linha 1668**: Verifica se professor foi derrotado
+
+```javascript
+                const card = document.createElement('div');
+```
+
+**Linha 1670**: Cria elemento do card
+
+```javascript
+                card.className = `professor-card ${isCompleted ? 'completed' : isUnlocked ? 'unlocked' : 'locked'}`;
+```
+
+**Linha 1671**: Aplica classes CSS baseadas no status
+
+```javascript
+                if (isUnlocked && !isCompleted) {
+                    card.onclick = () => startBattle(professor);
+                }
+```
+
+**Linha 1673-1675**: Adiciona evento de clique se disponível
+
+```javascript
+                const randomPhrase = professor.phrases[Math.floor(Math.random() * professor.phrases.length)];
+```
+
+**Linha 1677**: Seleciona frase aleatória do professor
+
+```javascript
+                card.innerHTML = `
+                    <div class="professor-avatar" style="border-color: ${professor.color}; background: linear-gradient(45deg, ${professor.color}20, ${professor.color}40);">
+                        ${isUnlocked ? professor.emoji : '🔒'}
+                    </div>
+```
+
+**Linha 1679-1682**: HTML do avatar (emoji ou cadeado)
+
+```javascript
+                    <div class="professor-name">Prof. ${professor.name}</div>
+                    <div class="professor-subject" style="color: ${professor.color};">${professor.subject}</div>
+                    <div class="professor-description">${professor.description}</div>
+```
+
+**Linha 1683-1685**: Nome, matéria e descrição
+
+```javascript
+                    <div class="professor-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" style="color: ${professor.color};">${professor.hp}</span>
+                            <span class="stat-label">HP</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" style="color: ${professor.color};">${professor.powerLevel}</span>
+                            <span class="stat-label">Poder</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" style="color: ${professor.color};">${'⭐'.repeat(professor.difficulty)}</span>
+                            <span class="stat-label">Dificuldade</span>
+                        </div>
+                    </div>
+```
+
+**Linha 1687-1699**: Estatísticas do professor
+
+```javascript
+                    <div style="background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 10px; margin-top: 1rem; border-left: 3px solid ${professor.color};">
+                        <div style="font-style: italic; font-size: 0.85rem; color: #ddd; text-align: center;">
+                            "${randomPhrase.substring(0, 60)}..."
+                        </div>
+                    </div>
+```
+
+**Linha 1701-1705**: Caixa com frase do professor
+
+```javascript
+                    <div style="text-align: center; margin-top: 1rem; font-weight: bold; font-size: 1rem;">
+                        ${isCompleted ? '✅ DERROTADO' : isUnlocked ? '⚔️ DISPONÍVEL' : '🔒 BLOQUEADO'}
+                    </div>
+                `;
+```
+
+**Linha 1707-1710**: Status do professor
+
+```javascript
+                grid.appendChild(card);
+```
+
+**Linha 1712**: Adiciona card à grade
+
+```javascript
+            });
+```
+
+**Linha 1713**: Fecha loop forEach
+
+```javascript
+        }
+```
+
+**Linha 1714**: Fecha função generateProfessorGrid
+
+## SEÇÃO 51: LÓGICA DE DESBLOQUEIO E BATALHA (Linhas 1716-1760)
+
+```javascript
+        function isProfessorUnlocked(professor) {
+```
+
+**Linha 1716**: Função para verificar se professor está desbloqueado
+
+```javascript
+            if (professor.id === 1) return true;
+```
+
+**Linha 1717**: Primeiro professor sempre desbloqueado
+
+```javascript
+            return gameState.victories.includes(professor.id - 1);
+```
+
+**Linha 1718**: Outros professores desbloqueiam após derrotar o anterior
+
+```javascript
+        }
+```
+
+**Linha 1719**: Fecha função isProfessorUnlocked
+
+```javascript
+        function startBattle(professor) {
+```
+
+**Linha 1721**: Função para iniciar batalha
+
+```javascript
+            if (!isProfessorUnlocked(professor)) {
+```
+
+**Linha 1722**: Verifica se professor está desbloqueado
+
+```javascript
+                alert('Este mestre ainda está selado! Derrote o anterior primeiro!');
+```
+
+**Linha 1723**: Alerta se não estiver desbloqueado
+
+```javascript
+                return;
+```
+
+**Linha 1724**: Sai da função
+
+```javascript
+            }
+```
+
+**Linha 1725**: Fecha condição
+
+```javascript
+            gameState.currentBoss = professor;
+```
+
+**Linha 1727**: Define professor atual
+
+```javascript
+            gameState.bossHP = professor.hp;
+```
+
+**Linha 1728**: Define HP do boss
+
+```javascript
+            gameState.bossMaxHP = professor.hp;
+```
+
+**Linha 1729**: Define HP máximo do boss
+
+```javascript
+            gameState.playerHP = gameState.playerMaxHP;
+```
+
+**Linha 1730**: Restaura HP do jogador
+
+```javascript
+            gameState.isInBattle = true;
+```
+
+**Linha 1731**: Marca como em batalha
+
+```javascript
+            gameState.currentCombo = 0;
+```
+
+**Linha 1732**: Reseta combo
+
+```javascript
+            gameState.battleStats = {
+                questionsAnswered: 0,
+                correctAnswers: 0,
+                criticalHits: 0,
+                timeBonus: 0
+            };
+```
+
+**Linha 1733-1738**: Reseta estatísticas da batalha
+
+```javascript
+            document.getElementById('professorSelect').style.display = 'none';
+```
+
+**Linha 1740**: Esconde seleção de professores
+
+```javascript
+            document.getElementById('battleArena').style.display = 'block';
+```
+
+**Linha 1741**: Mostra arena de batalha
+
+```javascript
+            setupBattle(professor);
+```
+
+**Linha 1742**: Configura a batalha
+
+```javascript
+        }
+```
+
+**Linha 1743**: Fecha função startBattle
+
+## SEÇÃO 52: CONFIGURAÇÃO DA BATALHA (Linhas 1745-1780)
+
+```javascript
+        function setupBattle(professor) {
+```
+
+**Linha 1745**: Função para configurar batalha
+
+```javascript
+            const bossElement = document.getElementById('professorBoss');
+```
+
+**Linha 1746**: Obtém elemento do boss
+
+```javascript
+            bossElement.style.borderColor = professor.color;
+```
+
+**Linha 1747**: Define cor da borda
+
+```javascript
+            bossElement.style.color = professor.color;
+```
+
+**Linha 1748**: Define cor do texto
+
+```javascript
+            document.getElementById('bossAvatar').textContent = professor.emoji;
+```
+
+**Linha 1750**: Define emoji do boss
+
+```javascript
+            document.getElementById('bossAvatar').style.borderColor = professor.color;
+```
+
+**Linha 1751**: Define cor da borda do avatar
+
+```javascript
+            document.getElementById('bossAvatar').style.background = `linear-gradient(45deg, ${professor.color}40, ${professor.color}80)`;
+```
+
+**Linha 1752**: Define gradiente do fundo do avatar
+
+```javascript
+            document.getElementById('bossName').textContent = `MESTRE ${professor.name.toUpperCase()}`;
+```
+
+**Linha 1754**: Define nome do boss em maiúsculas
+
+```javascript
+            document.getElementById('bossSubject').textContent = professor.subject.toUpperCase();
+```
+
+**Linha 1755**: Define matéria em maiúsculas
+
+```javascript
+            const dialogueContainer = document.getElementById('dialogueContainer');
+```
+
+**Linha 1757**: Obtém container do diálogo
+
+```javascript
+            dialogueContainer.style.borderColor = professor.color;
+```
+
+**Linha 1758**: Define cor da borda do diálogo
+
+```javascript
+            dialogueContainer.style.color = professor.color;
+```
+
+**Linha 1759**: Define cor do texto do diálogo
+
+```javascript
+            updateBattleUI();
+```
+
+**Linha 1761**: Atualiza interface da batalha
+
+```javascript
+            const phrase = professor.phrases[Math.floor(Math.random() * professor.phrases.length)];
+```
+
+**Linha 1763**: Seleciona frase aleatória
+
+```javascript
+            typeText(phrase, () => {
+                document.getElementById('startChallengeBtn').style.display = 'block';
+            });
+```
+
+**Linha 1764-1766**: Digita frase e mostra botão
+
+```javascript
+        }
+```
+
+**Linha 1767**: Fecha função setupBattle
+
+## SEÇÃO 53: ATUALIZAÇÃO DA INTERFACE DE BATALHA (Linhas 1769-1800)
+
+```javascript
+        function updateBattleUI() {
+```
+
+**Linha 1769**: Função para atualizar UI da batalha
+
+```javascript
+            const playerHPPercent = (gameState.playerHP / gameState.playerMaxHP) * 100;
+```
+
+**Linha 1770**: Calcula porcentagem do HP do jogador
+
+```javascript
+            const bossHPPercent = (gameState.bossHP / gameState.bossMaxHP) * 100;
+```
+
+**Linha 1771**: Calcula porcentagem do HP do boss
+
+```javascript
+            document.getElementById('playerHPFill').style.width = playerHPPercent + '%';
+```
+
+**Linha 1773**: Atualiza barra de HP do jogador
+
+```javascript
+            document.getElementById('playerHPText').textContent = `${gameState.playerHP}/${gameState.playerMaxHP}`;
+```
+
+**Linha 1774**: Atualiza texto do HP do jogador
+
+```javascript
+            document.getElementById('bossHPFill').style.width = bossHPPercent + '%';
+```
+
+**Linha 1776**: Atualiza barra de HP do boss
+
+```javascript
+            document.getElementById('bossHPText').textContent = `${gameState.bossHP}/${gameState.bossMaxHP}`;
+```
+
+**Linha 1777**: Atualiza texto do HP do boss
+
+```javascript
+            document.getElementById('playerLevelDisplay').textContent = `NÍVEL ${gameState.playerLevel}`;
+```
+
+**Linha 1779**: Atualiza display do nível
+
+```javascript
+            if (gameState.currentCombo > 0) {
+                document.getElementById('comboCounter').style.display = 'block';
+                document.getElementById('comboValue').textContent = gameState.currentCombo;
+            } else {
+                document.getElementById('comboCounter').style.display = 'none';
+            }
+```
+
+**Linha 1781-1786**: Mostra/esconde contador de combo
+
+```javascript
+        }
+```
+
+**Linha 1787**: Fecha função updateBattleUI
+
+## SEÇÃO 54: EFEITO DE DIGITAÇÃO (Linhas 1789-1815)
+
+```javascript
+        function typeText(text, callback) {
+```
+
+**Linha 1789**: Função para efeito de digitação
+
+```javascript
+            const dialogueElement = document.getElementById('dialogueText');
+```
+
+**Linha 1790**: Obtém elemento do diálogo
+
+```javascript
+            const startBtn = document.getElementById('startChallengeBtn');
+```
+
+**Linha 1791**: Obtém botão de iniciar
+
+```javascript
+            dialogueElement.innerHTML = '';
+```
+
+**Linha 1793**: Limpa texto anterior
+
+```javascript
+            dialogueElement.classList.add('typing-effect');
+```
+
+**Linha 1794**: Adiciona classe do efeito de digitação
+
+```javascript
+            startBtn.style.display = 'none';
+```
+
+**Linha 1795**: Esconde botão
+
+```javascript
+            let i = 0;
+```
+
+**Linha 1797**: Contador de caracteres
+
+```javascript
+            const typeInterval = setInterval(() => {
+```
+
+**Linha 1798**: Intervalo para digitação
+
+```javascript
+                if (i < text.length) {
+```
+
+**Linha 1799**: Se ainda há caracteres
+
+```javascript
+                    dialogueElement.innerHTML += text.charAt(i);
+```
+
+**Linha 1800**: Adiciona próximo caractere
+
+```javascript
+                    i++;
+```
+
+**Linha 1801**: Incrementa contador
+
+```javascript
+                } else {
+```
+
+**Linha 1802**: Se terminou
+
+```javascript
+                    clearInterval(typeInterval);
+```
+
+**Linha 1803**: Para o intervalo
+
+```javascript
+                    dialogueElement.classList.remove('typing-effect');
+```
+
+**Linha 1804**: Remove efeito de digitação
+
+```javascript
+                    if (callback) callback();
+```
+
+**Linha 1805**: Executa callback se existir
+
+```javascript
+                }
+```
+
+**Linha 1806**: Fecha else
+
+```javascript
+            }, 40);
+```
+
+**Linha 1807**: Intervalo de 40ms entre caracteres
+
+```javascript
+        }
+```
+
+**Linha 1808**: Fecha função typeText
+
+## SEÇÃO 55: INÍCIO DO DESAFIO (Linhas 1810-1840)
+
+```javascript
+        function startChallenge() {
+```
+
+**Linha 1810**: Função para iniciar desafio
+
+```javascript
+            document.getElementById('dialogueContainer').style.display = 'none';
+```
+
+**Linha 1811**: Esconde container do diálogo
+
+```javascript
+            document.getElementById('challengeArena').style.display = 'block';
+```
+
+**Linha 1812**: Mostra arena do desafio
+
+```javascript
+            const professor = gameState.currentBoss;
+```
+
+**Linha 1814**: Obtém professor atual
+
+```javascript
+            const challenge = professor.challenges[Math.floor(Math.random() * professor.challenges.length)];
+```
+
+**Linha 1815**: Seleciona desafio aleatório
+
+```javascript
+            gameState.currentChallenge = challenge;
+```
+
+**Linha 1816**: Define desafio atual
+
+```javascript
+            gameState.timeLeft = challenge.timeLimit;
+```
+
+**Linha 1817**: Define tempo limite
+
+```javascript
+            document.getElementById('challengeTitle').textContent = `DESAFIO DE ${professor.subject.toUpperCase()}`;
+```
+
+**Linha 1819**: Define título do desafio
+
+```javascript
+            generateChallenge(challenge);
+```
+
+**Linha 1821**: Gera conteúdo do desafio
+
+```javascript
+            startTimer();
+```
+
+**Linha 1822**: Inicia timer
+
+```javascript
+        }
+```
+
+**Linha 1823**: Fecha função startChallenge
+
+## SEÇÃO 56: GERAÇÃO DO DESAFIO (Linhas 1825-1870)
+
+```javascript
+        function generateChallenge(challenge) {
+```
+
+**Linha 1825**: Função para gerar desafio
+
+```javascript
+            const content = document.getElementById('challengeContent');
+```
+
+**Linha 1826**: Obtém container do conteúdo
+
+```javascript
+            content.innerHTML = '';
+```
+
+**Linha 1827**: Limpa conteúdo anterior
+
+```javascript
+            if (challenge.type === 'calculation' || challenge.answer !== undefined) {
+```
+
+**Linha 1829**: Se é desafio matemático (resposta numérica)
+
+```javascript
+                content.innerHTML = `
+                    <div class="math-challenge">
+                        <div class="equation-display">${challenge.question}</div>
+                        <div class="answer-section">
+                            <div class="answer-display" id="answerDisplay">0</div>
+                            <div class="number-grid">
+                                ${[1,2,3,'C',4,5,6,'⌫',7,8,9,'.',0,'=','−','+'].map(num =>
+                                    `<button class="number-btn" onclick="inputNumber('${num}')">${num}</button>`
+                                ).join('')}
+                            </div>
+                            <button class="menu-btn" onclick="submitMathAnswer()" style="margin-top: 1rem; background: linear-gradient(45deg, #00ff00, #00aa00);">
+                                ⚡ CONFIRMAR RESPOSTA
+                            </button>
+                        </div>
+                    </div>
+                `;
+```
+
+**Linha 1830-1845**: HTML para desafio matemático com calculadora
+
+```javascript
+            } else {
+```
+
+**Linha 1846**: Se é múltipla escolha
+
+```javascript
+                content.innerHTML = `
+                    <div class="multiple-choice">
+                        <div class="question-text">${challenge.question}</div>
+                        <div class="options-grid">
+                            ${challenge.options.map((option, index) =>
+                                `<button class="option-btn" onclick="selectOption(${index})">${option}</button>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `;
+```
+
+**Linha 1847-1856**: HTML para múltipla escolha
+
+```javascript
+            }
+```
+
+**Linha 1857**: Fecha condição
+
+```javascript
+        }
+```
+
+**Linha 1858**: Fecha função generateChallenge
+
+## SEÇÃO 57: ENTRADA DE NÚMEROS (Linhas 1860-1890)
+
+```javascript
+        let currentAnswer = '';
+```
+
+**Linha 1860**: Variável para resposta atual
+
+```javascript
+        function inputNumber(num) {
+```
+
+**Linha 1862**: Função para entrada de números
+
+```javascript
+            if (num === 'C') {
+```
+
+**Linha 1863**: Se é botão Clear
+
+```javascript
+                currentAnswer = '';
+```
+
+**Linha 1864**: Limpa resposta
+
+```javascript
+                document.getElementById('answerDisplay').textContent = '0';
+```
+
+**Linha 1865**: Mostra 0
+
+```javascript
+            } else if (num === '⌫') {
+```
+
+**Linha 1866**: Se é backspace
+
+```javascript
+                currentAnswer = currentAnswer.slice(0, -1);
+```
+
+**Linha 1867**: Remove último caractere
+
+```javascript
+                document.getElementById('answerDisplay').textContent = currentAnswer || '0';
+```
+
+**Linha 1868**: Atualiza display
+
+```javascript
+            } else if (num === '=') {
+```
+
+**Linha 1869**: Se é igual
+
+```javascript
+                submitMathAnswer();
+```
+
+**Linha 1870**: Submete resposta
+
+```javascript
+            } else if (num === '−') {
+```
+
+**Linha 1871**: Se é menos
+
+```javascript
+                currentAnswer += '-';
+```
+
+**Linha 1872**: Adiciona sinal negativo
+
+```javascript
+                document.getElementById('answerDisplay').textContent = currentAnswer;
+```
+
+**Linha 1873**: Atualiza display
+
+```javascript
+            } else {
+```
+
+**Linha 1874**: Outros números/operadores
+
+```javascript
+                currentAnswer += num;
+```
+
+**Linha 1875**: Adiciona à resposta
+
+```javascript
+                document.getElementById('answerDisplay').textContent = currentAnswer;
+```
+
+**Linha 1876**: Atualiza display
+
+```javascript
+            }
+```
+
+**Linha 1877**: Fecha else
+
+```javascript
+        }
+```
+
+**Linha 1878**: Fecha função inputNumber
+
+## SEÇÃO 58: SUBMISSÃO DE RESPOSTA MATEMÁTICA (Linhas 1880-1910)
+
+```javascript
+        function submitMathAnswer() {
+```
+
+**Linha 1880**: Função para submeter resposta matemática
+
+```javascript
+            const challenge = gameState.currentChallenge;
+```
+
+**Linha 1881**: Obtém desafio atual
+
+```javascript
+            const userAnswer = parseFloat(currentAnswer);
+```
+
+**Linha 1882**: Converte resposta para número
+
+```javascript
+            const correctAnswer = challenge.answer;
+```
+
+**Linha 1883**: Obtém resposta correta
+
+```javascript
+            clearInterval(gameState.challengeTimer);
+```
+
+**Linha 1885**: Para o timer
+
+```javascript
+            let isCorrect = false;
+```
+
+**Linha 1887**: Flag de resposta correta
+
+```javascript
+            if (challenge.tolerance) {
+```
+
+**Linha 1888**: Se há tolerância para aproximação
+
+```javascript
+                isCorrect = Math.abs(userAnswer - correctAnswer) <= challenge.tolerance;
+```
+
+**Linha 1889**: Verifica dentro da tolerância
+
+```javascript
+            } else {
+```
+
+**Linha 1890**: Se não há tolerância
+
+```javascript
+                isCorrect = userAnswer === correctAnswer;
+```
+
+**Linha 1891**: Verifica igualdade exata
+
+```javascript
+            }
+```
+
+**Linha 1892**: Fecha condição
+
+```javascript
+            document.getElementById('challengeArena').style.display = 'none';
+```
+
+**Linha 1894**: Esconde arena do desafio
+
+```javascript
+            processAnswer(isCorrect);
+```
+
+**Linha 1895**: Processa resposta
+
+```javascript
+        }
+```
+
+**Linha 1896**: Fecha função submitMathAnswer
+
+## SEÇÃO 59: SELEÇÃO DE OPÇÃO (Linhas 1898-1920)
+
+```javascript
+        function selectOption(selectedIndex) {
+```
+
+**Linha 1898**: Função para selecionar opção
+
+```javascript
+            const challenge = gameState.currentChallenge;
+```
+
+**Linha 1899**: Obtém desafio atual
+
+```javascript
+            const options = document.querySelectorAll('.option-btn');
+```
+
+**Linha 1900**: Obtém todos os botões de opção
+
+```javascript
+            clearInterval(gameState.challengeTimer);
+```
+
+**Linha 1902**: Para o timer
+
+```javascript
+            options.forEach((option, index) => {
+```
+
+**Linha 1904**: Loop através das opções
+
+```javascript
+                option.onclick = null;
+```
+
+**Linha 1905**: Remove evento de clique
+
+```javascript
+                if (index === challenge.correct) {
+```
+
+**Linha 1906**: Se é a opção correta
+
+```javascript
+                    option.classList.add('correct');
+```
+
+**Linha 1907**: Adiciona classe correct
+
+```javascript
+                } else if (index === selectedIndex && index !== challenge.correct) {
+```
+
+**Linha 1908**: Se é a opção selecionada e incorreta
+
+```javascript
+                    option.classList.add('incorrect');
+```
+
+**Linha 1909**: Adiciona classe incorrect
+
+```javascript
+                }
+```
+
+**Linha 1910**: Fecha condição
+
+```javascript
+            });
+```
+
+**Linha 1911**: Fecha forEach
+
+```javascript
+            setTimeout(() => {
+                document.getElementById('challengeArena').style.display = 'none';
+                processAnswer(selectedIndex === challenge.correct);
+            }, 1500);
+```
+
+**Linha 1913-1916**: Aguarda 1.5s e processa resposta
+
+```javascript
+        }
+```
+
+**Linha 1917**: Fecha função selectOption
+
+## SEÇÃO 60: PROCESSAMENTO DA RESPOSTA (Linhas 1919-1980)
+
+```javascript
+        function processAnswer(isCorrect) {
+```
+
+**Linha 1919**: Função para processar resposta
+
+```javascript
+            const professor = gameState.currentBoss;
+```
+
+**Linha 1920**: Obtém professor atual
+
+```javascript
+            gameState.battleStats.questionsAnswered++;
+```
+
+**Linha 1921**: Incrementa perguntas respondidas
+
+```javascript
+            if (isCorrect) {
+```
+
+**Linha 1923**: Se resposta correta
+
+```javascript
+                gameState.battleStats.correctAnswers++;
+```
+
+**Linha 1924**: Incrementa respostas corretas
+
+```javascript
+                gameState.currentCombo++;
+```
+
+**Linha 1925**: Incrementa combo
+
+```javascript
+                if (gameState.currentCombo > gameState.maxCombo) {
+                    gameState.maxCombo = gameState.currentCombo;
+                }
+```
+
+**Linha 1926-1928**: Atualiza combo máximo se necessário
+
+```javascript
+                let baseDamage = Math.floor(Math.random() * 120) + 80;
+```
+
+**Linha 1930**: Dano base aleatório (80-199)
+
+```javascript
+                let comboMultiplier = 1 + (gameState.currentCombo * 0.25);
+```
+
+**Linha 1931**: Multiplicador de combo (+25% por combo)
+
+```javascript
+                let finalDamage = Math.floor(baseDamage * comboMultiplier);
+```
+
+**Linha 1932**: Dano final com combo
+
+```javascript
+                let isCritical = Math.random() < 0.2;
+```
+
+**Linha 1934**: 20% chance de crítico
+
+```javascript
+                if (isCritical) {
+                    finalDamage *= 2;
+                    gameState.battleStats.criticalHits++;
+                }
+```
+
+**Linha 1935-1938**: Dobra dano se crítico
+
+```javascript
+                gameState.bossHP = Math.max(0, gameState.bossHP - finalDamage);
+```
+
+**Linha 1940**: Aplica dano ao boss
+
+```javascript
+                showDamageEffect(document.querySelector('.professor-boss'), finalDamage, isCritical ? 'damage-critical' : 'damage-boss');
+```
+
+**Linha 1941**: Mostra efeito de dano no boss
+
+```javascript
+                const message = isCritical ?
+                    `CRÍTICO! Dano devastador de ${finalDamage}! Combo ${gameState.currentCombo}x!` :
+                    `Excelente! ${finalDamage} de dano! Combo ${gameState.currentCombo}x!`;
+```
+
+**Linha 1943-1945**: Mensagem baseada se foi crítico ou não
+
+```javascript
+                document.getElementById('dialogueContainer').style.display = 'block';
+```
+
+**Linha 1947**: Mostra container do diálogo
+
+```javascript
+                typeText(message, () => {
+                    if (gameState.bossHP <= 0) {
+                        victory();
+                    } else {
+                        bossAttack();
+                    }
+                });
+```
+
+**Linha 1948-1954**: Digita mensagem e verifica se boss morreu
+
+```javascript
+            } else {
+```
+
+**Linha 1955**: Se resposta incorreta
+
+```javascript
+                gameState.currentCombo = 0;
+```
+
+**Linha 1956**: Reseta combo
+
+```javascript
+                let damage = Math.floor(Math.random() * 100) + 60;
+```
+
+**Linha 1958**: Dano base do boss (60-159)
+
+```javascript
+                const hpPercent = gameState.bossHP / gameState.bossMaxHP;
+```
+
+**Linha 1960**: Calcula porcentagem de HP do boss
+
+```javascript
+                if (hpPercent < 0.3) {
+                    damage *= 1.6;
+                } else if (hpPercent < 0.6) {
+                    damage *= 1.3;
+                }
+```
+
+**Linha 1961-1965**: Boss fica mais forte com HP baixo
+
+```javascript
+                damage = Math.floor(damage);
+```
+
+**Linha 1967**: Arredonda dano
+
+```javascript
+                gameState.playerHP = Math.max(0, gameState.playerHP - damage);
+```
+
+**Linha 1968**: Aplica dano ao jogador
+
+```javascript
+                showDamageEffect(document.querySelector('.player-area'), damage, 'damage-player');
+```
+
+**Linha 1970**: Mostra efeito de dano no jogador
+
+```javascript
+                document.getElementById('dialogueContainer').style.display = 'block';
+```
+
+**Linha 1972**: Mostra container do diálogo
+
+```javascript
+                typeText(`Resposta incorreta! Você recebeu ${damage} de dano! Combo perdido!`, () => {
+                    if (gameState.playerHP <= 0) {
+                        defeat();
+                    } else {
+                        bossAttack();
+                    }
+                });
+```
+
+**Linha 1973-1979**: Digita mensagem de erro e verifica se jogador morreu
+
+```javascript
+            }
+```
+
+**Linha 1980**: Fecha else
+
+```javascript
+            updateBattleUI();
+```
+
+**Linha 1982**: Atualiza interface da batalha
+
+```javascript
+        }
+```
+
+**Linha 1983**: Fecha função processAnswer
+
+## SEÇÃO 61: TIMER DO DESAFIO (Linhas 1985-2005)
+
+```javascript
+        function startTimer() {
+```
+
+**Linha 1985**: Função para iniciar timer
+
+```javascript
+            const timerFill = document.getElementById('timerFill');
+```
+
+**Linha 1986**: Obtém preenchimento do timer
+
+```javascript
+            const timerText = document.getElementById('timerText');
+```
+
+**Linha 1987**: Obtém texto do timer
+
+```javascript
+            gameState.challengeTimer = setInterval(() => {
+```
+
+**Linha 1989**: Inicia intervalo do timer
+
+```javascript
+                gameState.timeLeft--;
+```
+
+**Linha 1990**: Decrementa tempo
+
+```javascript
+                const percentage = (gameState.timeLeft / gameState.currentChallenge.timeLimit) * 100;
+```
+
+**Linha 1991**: Calcula porcentagem restante
+
+```javascript
+                timerFill.style.width = percentage + '%';
+```
+
+**Linha 1992**: Atualiza barra do timer
+
+```javascript
+                timerText.textContent = `Tempo: ${gameState.timeLeft}s`;
+```
+
+**Linha 1993**: Atualiza texto do timer
+
+```javascript
+                if (gameState.timeLeft <= 0) {
+```
+
+**Linha 1995**: Se tempo esgotou
+
+```javascript
+                    clearInterval(gameState.challengeTimer);
+```
+
+**Linha 1996**: Para o timer
+
+```javascript
+                    document.getElementById('challengeArena').style.display = 'none';
+```
+
+**Linha 1997**: Esconde arena do desafio
+
+```javascript
+                    processAnswer(false);
+```
+
+**Linha 1998**: Processa como resposta incorreta
+
+```javascript
+                }
+```
+
+**Linha 1999**: Fecha condição
+
+```javascript
+            }, 1000);
+```
+
+**Linha 2000**: Intervalo de 1 segundo
+
+```javascript
+        }
+```
+
+**Linha 2001**: Fecha função startTimer
+
+## SEÇÃO 62: ATAQUE DO BOSS (Linhas 2003-2040)
+
+```javascript
+        function bossAttack() {
+```
+
+**Linha 2003**: Função para ataque do boss
+
+```javascript
+            const professor = gameState.currentBoss;
+```
+
+**Linha 2004**: Obtém professor atual
+
+```javascript
+            let damage = Math.floor(Math.random() * 80) + 50;
+```
+
+**Linha 2005**: Dano base do boss (50-129)
+
+```javascript
+            const hpPercent = gameState.bossHP / gameState.bossMaxHP;
+```
+
+**Linha 2007**: Calcula porcentagem de HP do boss
+
+```javascript
+            if (hpPercent < 0.3) {
+                damage *= 1.5;
+            } else if (hpPercent < 0.6) {
+                damage *= 1.2;
+            }
+```
+
+**Linha 2008-2012**: Boss fica mais forte com HP baixo
+
+```javascript
+            damage = Math.floor(damage);
+```
+
+**Linha 2014**: Arredonda dano
+
+```javascript
+            if (Math.random() < 0.25) {
+                damage *= 1.8;
+            }
+```
+
+**Linha 2016-2018**: 25% chance de ataque especial
+
+```javascript
+            gameState.playerHP = Math.max(0, gameState.playerHP - damage);
+```
+
+**Linha 2020**: Aplica dano ao jogador
+
+```javascript
+            showDamageEffect(document.querySelector('.player-area'), damage, 'damage-player');
+```
+
+**Linha 2021**: Mostra efeito de dano
+
+```javascript
+            const attackPhrase = `${professor.name} contra-atacou! ${damage} de dano!`;
+```
+
+**Linha 2023**: Mensagem do ataque
+
+```javascript
+            setTimeout(() => {
+```
+
+**Linha 2025**: Aguarda 1 segundo
+
+```javascript
+                typeText(attackPhrase, () => {
+```
+
+**Linha 2026**: Digita mensagem do ataque
+
+```javascript
+                    updateBattleUI();
+```
+
+**Linha 2027**: Atualiza interface
+
+```javascript
+                    if (gameState.playerHP <= 0) {
+```
+
+**Linha 2028**: Se jogador morreu
+
+```javascript
+                        defeat();
+```
+
+**Linha 2029**: Chama função de derrota
+
+```javascript
+                    } else {
+```
+
+**Linha 2030**: Se jogador ainda vive
+
+```javascript
+                        setTimeout(() => {
+```
+
+**Linha 2031**: Aguarda 2 segundos
+
+```javascript
+                            const nextPhrase = professor.phrases[Math.floor(Math.random() * professor.phrases.length)];
+```
+
+**Linha 2032**: Seleciona próxima frase
+
+```javascript
+                            typeText(nextPhrase, () => {
+```
+
+**Linha 2033**: Digita próxima frase
+
+```javascript
+                                document.getElementById('startChallengeBtn').style.display = 'block';
+```
+
+**Linha 2034**: Mostra botão de próximo desafio
+
+```javascript
+                            });
+```
+
+**Linha 2035**: Fecha typeText
+
+```javascript
+                        }, 2000);
+```
+
+**Linha 2036**: Fecha setTimeout de 2 segundos
+
+```javascript
+                    }
+```
+
+**Linha 2037**: Fecha else
+
+```javascript
+                });
+```
+
+**Linha 2038**: Fecha typeText do ataque
+
+```javascript
+            }, 1000);
+```
+
+**Linha 2039**: Fecha setTimeout de 1 segundo
+
+```javascript
+        }
+```
+
+**Linha 2040**: Fecha função bossAttack
+
+## SEÇÃO 63: EFEITO DE DANO VISUAL (Linhas 2042-2055)
+
+```javascript
+        function showDamageEffect(target, damage, type) {
+```
+
+**Linha 2042**: Função para mostrar efeito de dano
+
+```javascript
+            const effect = document.createElement('div');
+```
+
+**Linha 2043**: Cria elemento do efeito
+
+```javascript
+            effect.className = `damage-effect ${type}`;
+```
+
+**Linha 2044**: Aplica classes CSS
+
+```javascript
+            effect.textContent = `-${damage}`;
+```
+
+**Linha 2045**: Define texto do dano
+
+```javascript
+            const rect = target.getBoundingClientRect();
+```
+
+**Linha 2047**: Obtém posição do alvo
+
+```javascript
+            effect.style.left = rect.left + rect.width/2 + 'px';
+```
+
+**Linha 2048**: Posiciona horizontalmente no centro do alvo
+
+```javascript
+            effect.style.top = rect.top + 'px';
+```
+
+**Linha 2049**: Posiciona verticalmente no topo do alvo
+
+```javascript
+            effect.style.position = 'fixed';
+```
+
+**Linha 2050**: Define posição fixa
+
+```javascript
+            document.body.appendChild(effect);
+```
+
+**Linha 2052**: Adiciona ao body
+
+```javascript
+            setTimeout(() => effect.remove(), 2000);
+```
+
+**Linha 2053**: Remove após 2 segundos
+
+```javascript
+        }
+```
+
+**Linha 2054**: Fecha função showDamageEffect
+
+## SEÇÃO 64: VITÓRIA (Linhas 2056-2100)
+
+```javascript
+        function victory() {
+```
+
+**Linha 2056**: Função de vitória
+
+```javascript
+            gameState.victories.push(gameState.currentBoss.id);
+```
+
+**Linha 2057**: Adiciona professor à lista de vitórias
+
+```javascript
+            gameState.playerLevel++;
+```
+
+**Linha 2058**: Aumenta nível do jogador
+
+```javascript
+            gameState.playerPower += 150;
+```
+
+**Linha 2059**: Aumenta poder do jogador
+
+```javascript
+            gameState.playerMaxHP += 200;
+```
+
+**Linha 2060**: Aumenta HP máximo
+
+```javascript
+            gameState.playerHP = gameState.playerMaxHP;
+```
+
+**Linha 2061**: Restaura HP completo
+
+```javascript
+            const baseScore = 1500;
+```
+
+**Linha 2063**: Pontuação base
+
+```javascript
+            const comboBonus = gameState.maxCombo * 75;
+```
+
+**Linha 2064**: Bônus por combo máximo
+
+```javascript
+            const accuracyBonus = Math.floor((gameState.battleStats.correctAnswers / gameState.battleStats.questionsAnswered) * 750);
+```
+
+**Linha 2065**: Bônus por precisão
+
+```javascript
+            const criticalBonus = gameState.battleStats.criticalHits * 300;
+```
+
+**Linha 2066**: Bônus por críticos
+
+```javascript
+            const timeBonus = gameState.timeLeft * 15;
+```
+
+**Linha 2067**: Bônus por tempo restante
+
+```javascript
+            const finalScore = baseScore + comboBonus + accuracyBonus + criticalBonus + timeBonus;
+```
+
+**Linha 2069**: Calcula pontuação final
+
+```javascript
+            gameState.totalScore += finalScore;
+```
+
+**Linha 2070**: Adiciona à pontuação total
+
+```javascript
+            document.getElementById('resultTitle').textContent = 'VITÓRIA ÉPICA!';
+```
+
+**Linha 2072**: Define título de vitória
+
+```javascript
+            document.getElementById('resultTitle').className = 'result-title victory-title';
+```
+
+**Linha 2073**: Aplica classe de vitória
+
+```javascript
+            document.getElementById('resultContent').style.borderColor = '#00ff00';
+```
+
+**Linha 2074**: Define borda verde
+
+```javascript
+            document.getElementById('resultMessage').innerHTML = `
+                🏆 Você derrotou o Mestre ${gameState.currentBoss.name}! 🏆<br>
+                <span style="font-size: 1.2rem; color: #00ff00; margin-top: 1rem; display: block;">
+                    +150 Poder | +200 HP Máximo | Nível ${gameState.playerLevel}
+                </span>
+            `;
+```
+
+**Linha 2076-2080**: Define mensagem de vitória
+
+```javascript
+            document.getElementById('finalScore').textContent = finalScore;
+```
+
+**Linha 2082**: Mostra pontuação final
+
+```javascript
+            document.getElementById('finalCombo').textContent = gameState.maxCombo;
+```
+
+**Linha 2083**: Mostra combo máximo
+
+```javascript
+            document.getElementById('finalTime').textContent = gameState.timeLeft + 's';
+```
+
+**Linha 2084**: Mostra tempo restante
+
+```javascript
+            saveGameState();
+```
+
+**Linha 2086**: Salva estado do jogo
+
+```javascript
+            if (gameState.victories.length >= 15) {
+```
+
+**Linha 2088**: Se derrotou todos os professores
+
+```javascript
+                setTimeout(() => {
+                    document.getElementById('resultTitle').textContent = 'MESTRE SUPREMO UNIVERSAL!';
+                    document.getElementById('resultMessage').innerHTML = `
+                        🌟 PARABÉNS! VOCÊ DOMINOU TODA A ACADEMIA! 🌟<br>
+                        <span style="font-size: 1.2rem; color: #ffff00; margin-top: 1rem; display: block;">
+                            Você é agora o MAIOR ESTUDANTE DO UNIVERSO!<br>
+                            Poder Final: ${gameState.playerPower} | Nível: ${gameState.playerLevel}<br>
+                            Pontuação Total: ${gameState.totalScore}
+                        </span>
+                    `;
+                }, 3000);
+```
+
+**Linha 2089-2098**: Mensagem especial de conclusão total
+
+```javascript
+            }
+```
+
+**Linha 2099**: Fecha condição
+
+```javascript
+            document.getElementById('resultScreen').style.display = 'flex';
+```
+
+**Linha 2101**: Mostra tela de resultado
+
+```javascript
+        }
+```
+
+**Linha 2102**: Fecha função victory
+
+## SEÇÃO 65: DERROTA E CONTINUAÇÃO (Linhas 2104-2150)
+
+```javascript
+        function defeat() {
+```
+
+**Linha 2104**: Função de derrota
+
+```javascript
+            gameState.defeats++;
+```
+
+**Linha 2105**: Incrementa contador de derrotas
+
+```javascript
+            gameState.currentCombo = 0;
+```
+
+**Linha 2106**: Reseta combo
+
+```javascript
+            document.getElementById('resultTitle').textContent = 'DERROTA ÉPICA!';
+```
+
+**Linha 2108**: Define título de derrota
+
+```javascript
+            document.getElementById('resultTitle').className = 'result-title defeat-title';
+```
+
+**Linha 2109**: Aplica classe de derrota
+
+```javascript
+            document.getElementById('resultContent').style.borderColor = '#ff0000';
+```
+
+**Linha 2110**: Define borda vermelha
+
+```javascript
+            document.getElementById('resultMessage').innerHTML = `
+                💀 O Mestre ${gameState.currentBoss.name} provou sua superioridade... 💀<br>
+                <span style="font-size: 1.2rem; color: #ff6666; margin-top: 1rem; display: block;">
+                    Mas o conhecimento é eterno! Estude mais e tente novamente!<br>
+                    "O fracasso é apenas uma oportunidade para recomeçar com mais inteligência."
+                </span>
+            `;
+```
+
+**Linha 2112-2118**: Define mensagem de derrota motivacional
+
+```javascript
+            document.getElementById('finalScore').textContent = '0';
+```
+
+**Linha 2120**: Pontuação zero na derrota
+
+```javascript
+            document.getElementById('finalCombo').textContent = gameState.maxCombo;
+```
+
+**Linha 2121**: Mostra combo máximo alcançado
+
+```javascript
+            document.getElementById('finalTime').textContent = '0s';
+```
+
+**Linha 2122**: Tempo zero na derrota
+
+```javascript
+            saveGameState();
+```
+
+**Linha 2124**: Salva estado do jogo
+
+```javascript
+            document.getElementById('resultScreen').style.display = 'flex';
+```
+
+**Linha 2125**: Mostra tela de resultado
+
+```javascript
+        }
+```
+
+**Linha 2126**: Fecha função defeat
+
+```javascript
+        function continueJourney() {
+```
+
+**Linha 2128**: Função para continuar jornada
+
+```javascript
+            gameState.isInBattle = false;
+```
+
+**Linha 2129**: Marca como fora de batalha
+
+```javascript
+            gameState.playerHP = gameState.playerMaxHP;
+```
+
+**Linha 2130**: Restaura HP completo
+
+```javascript
+            gameState.currentCombo = 0;
+```
+
+**Linha 2131**: Reseta combo
+
+```javascript
+            document.getElementById('resultScreen').style.display = 'none';
+```
+
+**Linha 2132**: Esconde tela de resultado
+
+```javascript
+            showProfessorSelect();
+```
+
+**Linha 2133**: Volta para seleção de professores
+
+```javascript
+        }
+```
+
+**Linha 2134**: Fecha função continueJourney
+
+```javascript
+        function fleeBattle() {
+```
+
+**Linha 2136**: Função para fugir da batalha
+
+```javascript
+            if (confirm('⚠️ Tem certeza que deseja fugir? Você perderá 150 de poder e será marcado como covarde!')) {
+```
+
+**Linha 2137**: Confirmação de fuga com penalidade
+
+```javascript
+                gameState.playerPower = Math.max(100, gameState.playerPower - 150);
+```
+
+**Linha 2138**: Reduz poder (mínimo 100)
+
+```javascript
+                gameState.defeats++;
+```
+
+**Linha 2139**: Incrementa derrotas
+
+```javascript
+                gameState.currentCombo = 0;
+```
+
+**Linha 2140**: Reseta combo
+
+```javascript
+                continueJourney();
+```
+
+**Linha 2141**: Continua jornada
+
+```javascript
+            }
+```
+
+**Linha 2142**: Fecha condição
+
+```javascript
+        }
+```
+
+**Linha 2143**: Fecha função fleeBattle
+
+## SEÇÃO 66: ATUALIZAÇÃO DA UI E PERSISTÊNCIA (Linhas 2145-2180)
+
+```javascript
+        function updateUI() {
+```
+
+**Linha 2145**: Função para atualizar interface
+
+```javascript
+            document.getElementById('playerLevel').textContent = gameState.playerLevel;
+```
+
+**Linha 2146**: Atualiza nível do jogador
+
+```javascript
+            document.getElementById('playerPower').textContent = gameState.playerPower;
+```
+
+**Linha 2147**: Atualiza poder do jogador
+
+```javascript
+            document.getElementById('victories').textContent = `${gameState.victories.length}/15`;
+```
+
+**Linha 2148**: Atualiza contador de vitórias
+
+```javascript
+            document.getElementById('defeats').textContent = gameState.defeats;
+```
+
+**Linha 2149**: Atualiza contador de derrotas
+
+```javascript
+            document.getElementById('maxCombo').textContent = gameState.maxCombo;
+```
+
+**Linha 2150**: Atualiza combo máximo
+
+```javascript
+        }
+```
+
+**Linha 2151**: Fecha função updateUI
+
+```javascript
+        function saveGameState() {
+```
+
+**Linha 2153**: Função para salvar estado do jogo
+
+```javascript
+            localStorage.setItem('academiaMestresSupremoDefinitivo', JSON.stringify(gameState));
+```
+
+**Linha 2154**: Salva no localStorage como JSON
+
+```javascript
+        }
+```
+
+**Linha 2155**: Fecha função saveGameState
+
+```javascript
+        function loadGameState() {
+```
+
+**Linha 2157**: Função para carregar estado do jogo
+
+```javascript
+            const saved = localStorage.getItem('academiaMestresSupremoDefinitivo');
+```
+
+**Linha 2158**: Obtém dados salvos
+
+```javascript
+            if (saved) {
+```
+
+**Linha 2159**: Se há dados salvos
+
+```javascript
+                const savedState = JSON.parse(saved);
+```
+
+**Linha 2160**: Converte JSON para objeto
+
+```javascript
+                gameState = { ...gameState, ...savedState };
+```
+
+**Linha 2161**: Mescla com estado atual (spread operator)
+
+```javascript
+            }
+```
+
+**Linha 2162**: Fecha condição
+
+```javascript
+        }
+```
+
+**Linha 2163**: Fecha função loadGameState
+
+## SEÇÃO 67: RESET E FUNÇÕES INFORMATIVAS (Linhas 2165-2220)
+
+```javascript
+        function resetAllProgress() {
+```
+
+**Linha 2165**: Função para resetar todo o progresso
+
+```javascript
+            if (confirm('⚠️ ATENÇÃO SUPREMA! Isso apagará TODO seu progresso épico! Tem absoluta certeza?')) {
+```
+
+**Linha 2166**: Primeira confirmação
+
+```javascript
+                if (confirm('🔥 ÚLTIMA CHANCE! Você realmente quer destruir sua jornada heroica?')) {
+```
+
+**Linha 2167**: Segunda confirmação
+
+```javascript
+                    localStorage.removeItem('academiaMestresSupremoDefinitivo');
+```
+
+**Linha 2168**: Remove dados do localStorage
+
+```javascript
+                    gameState = {
+                        playerLevel: 1,
+                        playerPower: 100,
+                        playerHP: 500,
+                        playerMaxHP: 500,
+                        victories: [],
+                        defeats: 0,
+                        maxCombo: 0,
+                        currentBoss: null,
+                        bossHP: 1000,
+                        bossMaxHP: 1000,
+                        challengeTimer: null,
+                        timeLeft: 30,
+                        currentChallenge: null,
+                        isInBattle: false,
+                        currentCombo: 0,
+                        totalScore: 0,
+                        battleStats: {
+                            questionsAnswered: 0,
+                            correctAnswers: 0,
+                            criticalHits: 0,
+                            timeBonus: 0
+                        }
+                    };
+```
+
+**Linha 2169-2190**: Reseta gameState para valores iniciais
+
+```javascript
+                    generateProfessorGrid();
+```
+
+**Linha 2191**: Regenera grade de professores
+
+```javascript
+                    updateUI();
+```
+
+**Linha 2192**: Atualiza interface
+
+```javascript
+                    alert('🌟 Universo resetado! Sua nova jornada épica começa AGORA!');
+```
+
+**Linha 2193**: Alerta de confirmação
+
+```javascript
+                }
+```
+
+**Linha 2194**: Fecha segunda confirmação
+
+```javascript
+            }
+```
+
+**Linha 2195**: Fecha primeira confirmação
+
+```javascript
+        }
+```
+
+**Linha 2196**: Fecha função resetAllProgress
+
+```javascript
+        function showInstructions() {
+```
+
+**Linha 2198**: Função para mostrar instruções
+
+```javascript
+            alert(`⚔️ MANUAL DO GUERREIRO - ACADEMIA DOS MESTRES SUPREMOS ⚔️
+
+🎯 MISSÃO SUPREMA:
+• Derrote todos os 15 mestres supremos em combate épico
+• Cada mestre possui HP único, ataques devastadores e frases lendárias
+• Responda perguntas complexas para causar dano massivo
+• Torne-se o MESTRE SUPREMO UNIVERSAL!
+
+⚔️ SISTEMA DE COMBATE ÉPICO:
+• HP dos mestres: 1200-1800 (EXTREMAMENTE ALTO!)
+• Seu HP aumenta +200 a cada vitória
+• Respostas corretas = 80-300+ de dano (com combo)
+• Respostas erradas = 60-160 de dano recebido
+• Timer agressivo: 15-35 segundos por pergunta
+• Sistema de COMBO: +25% dano por acerto consecutivo
+
+🔥 MECÂNICAS AVANÇADAS:
+• CRÍTICOS: 20% chance de dano duplo
+• ATAQUES ESPECIAIS: Mestres usam 25% das vezes
+• FÚRIA: Mestres ficam mais fortes com HP baixo
+• COMBO SYSTEM: Multiplicador de dano por sequência
+• POWER SCALING: Cada vitória te deixa mais forte
+
+💀 DIFICULDADE EXTREMA:
+• 15 mestres únicos com personalidades épicas
+• Perguntas específicas e conhecimento profundo
+• Frases intimidadoras e ataques temáticos
+• Sistema de fuga com penalidade severa (-150 poder)
+• Progressão lenta mas recompensadora
+
+🏆 SISTEMA DE RANKING:
+• Mestre Supremo Universal: 15/15 vitórias
+• Lenda Acadêmica: 12+ vitórias
+• Guerreiro do Conhecimento: 8+ vitórias
+• Estudante Avançado: 5+ vitórias
+• Aprendiz Corajoso: 1+ vitórias
+
+⚡ ESTRATÉGIAS SUPREMAS:
+• Mantenha combos altos para dano máximo
+• Estude as matérias antes das batalhas
+• Respostas rápidas evitam ataques extras
+• Cada mestre tem padrões únicos
+• Use o tempo sabiamente - cada segundo conta
+
+BOA SORTE, GUERREIRO SUPREMO DO CONHECIMENTO! 🔥⚔️🌟`);
+```
+
+**Linha 2199-2240**: Manual completo do jogo em alert
+
+```javascript
+        }
+```
+
+**Linha 2241**: Fecha função showInstructions
+
+## SEÇÃO 68: HALL DA FAMA E INICIALIZAÇÃO (Linhas 2243-2310)
+
+```javascript
+        function showHallOfFame() {
+```
+
+**Linha 2243**: Função para mostrar hall da fama
+
+```javascript
+            const winRate = gameState.victories.length + gameState.defeats > 0 ?
+                ((gameState.victories.length / (gameState.victories.length + gameState.defeats)) * 100).toFixed(1) : 0;
+```
+
+**Linha 2244-2245**: Calcula taxa de vitória
+
+```javascript
+            let rank = 'Iniciante';
+            let rankEmoji = '📚';
+            if (gameState.victories.length >= 15) {
+                rank = '🌟 MESTRE SUPREMO UNIVERSAL';
+                rankEmoji = '🌟';
+            } else if (gameState.victories.length >= 12) {
+                rank = '🏆 LENDA ACADÊMICA';
+                rankEmoji = '🏆';
+            } else if (gameState.victories.length >= 8) {
+                rank = '⚔️ GUERREIRO DO CONHECIMENTO';
+                rankEmoji = '⚔️';
+            } else if (gameState.victories.length >= 5) {
+                rank = '🥇 ESTUDANTE AVANÇADO';
+                rankEmoji = '🥇';
+            } else if (gameState.victories.length >= 1) {
+                rank = '🥉 APRENDIZ CORAJOSO';
+                rankEmoji = '🥉';
+            }
+```
+
+**Linha 2247-2261**: Determina rank baseado em vitórias
+
+```javascript
+            alert(`🏆 HALL DA FAMA ÉPICO - SUAS CONQUISTAS SUPREMAS 🏆
+
+${rankEmoji} CLASSIFICAÇÃO ATUAL: ${rank}
+
+📊 ESTATÍSTICAS DE PODER:
+🎓 Nível Supremo: ${gameState.playerLevel}
+⚡ Poder Cósmico: ${gameState.playerPower}
+❤️ HP Máximo: ${gameState.playerMaxHP}
+🌟 Pontuação Total: ${gameState.totalScore}
+
+⚔️ HISTÓRICO DE BATALHAS ÉPICAS:
+🏆 Vitórias Gloriosas: ${gameState.victories.length}/15
+💀 Derrotas Honrosas: ${gameState.defeats}
+📈 Taxa de Vitória: ${winRate}%
+🔥 Combo Máximo: ${gameState.maxCombo}x
+
+🎖️ MESTRES DERROTADOS:
+${gameState.victories.length > 0 ? 
+    professors.filter(p => gameState.victories.includes(p.id))
+        .map(p => `⚔️ Mestre ${p.name} (${p.subject}) - Poder: ${p.powerLevel}`)
+        .join('\n') :
+    '💀 Nenhum mestre derrotado ainda... A jornada épica te aguarda!'
+}
+
+${gameState.victories.length >= 15 ?
+    '🌟🏆🌟 PARABÉNS! VOCÊ É O MESTRE SUPREMO UNIVERSAL! 🌟🏆🌟' :
+    `💪 Continue sua jornada épica! Faltam ${15 - gameState.victories.length} mestres para a glória suprema!`
+}
+
+🔥 "O conhecimento é poder, e o poder é eterno!" 🔥`);
+```
+
+**Linha 2263-2290**: Alert com estatísticas completas do jogador
+
+```javascript
+        }
+```
+
+**Linha 2291**: Fecha função showHallOfFame
+
+```javascript
+        window.onload = init;
+```
+
+**Linha 2293**: Executa função init quando página carrega
+
+```javascript
+    </script>
+```
+
+**Linha 2294**: Fecha seção JavaScript
+
+```html
+</body>
+```
+
+**Linha 2295**: Fecha elemento body
+
+```html
+</html>
+```
+
+**Linha 2296**: Fecha documento HTML
+
+---
+
+## RESUMO COMPLETO DO CÓDIGO
+
+Este código implementa um jogo educativo completo chamado "Academia dos Mestres Supremos - Edição Definitiva". Aqui está um resumo das principais funcionalidades:
+
+### **ESTRUTURA GERAL:**
+
+- **HTML**: Estrutura com 4 telas principais (menu, seleção, batalha, resultado)
+- **CSS**: Mais de 900 linhas de estilos com animações, gradientes e responsividade
+- **JavaScript**: Lógica completa do jogo com 15 professores únicos
+
+
+### **CARACTERÍSTICAS PRINCIPAIS:**
+
+1. **Sistema de Partículas**: Efeitos visuais animados de fundo
+2. **15 Professores Únicos**: Cada um com matéria, frases, desafios e dificuldade específica
+3. **Sistema de Combate**: HP, dano, combo, críticos e ataques especiais
+4. **Dois Tipos de Desafio**: Múltipla escolha e cálculo matemático
+5. **Progressão**: Níveis, poder, HP crescente e desbloqueio sequencial
+6. **Persistência**: Salvamento automático no localStorage
+7. **Interface Rica**: Animações, efeitos de dano, timers e estatísticas
+8. **Responsividade**: Adaptação para dispositivos móveis
+
+
+### **MECÂNICAS DE JOGO:**
+
+- **Combo System**: +25% de dano por acerto consecutivo
+- **Críticos**: 20% de chance de dano duplo
+- **Boss Scaling**: Inimigos ficam mais fortes com HP baixo
+- **Timer Pressure**: Tempo limitado por pergunta
+- **Risk/Reward**: Penalidades por fuga, recompensas por vitória
+
+
+O código demonstra uma implementação completa e profissional de um jogo educativo com mecânicas complexas, interface polida e experiência de usuário envolvente.
