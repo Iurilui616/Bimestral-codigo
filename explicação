@@ -1,0 +1,5038 @@
+Vou explicar TODAS as linhas do código. Como é muito extenso, vou dividir em seções detalhadas:
+
+## SEÇÃO 1: ESTRUTURA HTML BÁSICA E INÍCIO DO CSS (Linhas 1-35)
+
+```html
+<!DOCTYPE html>
+```
+
+**Linha 1**: Declara que este é um documento HTML5 moderno
+
+```html
+<html lang="pt-BR">
+```
+
+**Linha 2**: Inicia o elemento HTML e define o idioma como português brasileiro para acessibilidade
+
+```html
+<head>
+```
+
+**Linha 3**: Inicia a seção head onde ficam metadados e configurações
+
+```html
+    <meta charset="UTF-8">
+```
+
+**Linha 4**: Define codificação UTF-8 para suportar caracteres especiais e acentos
+
+```html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+**Linha 5**: Configura viewport para responsividade - largura igual ao dispositivo, zoom inicial 1.0
+
+```html
+    <title>🌟 ACADEMIA DOS MESTRES SUPREMOS - EDIÇÃO DEFINITIVA 🌟</title>
+```
+
+**Linha 6**: Título que aparece na aba do navegador, com emojis para visual atrativo
+
+```html
+    <style>
+```
+
+**Linha 7**: Inicia a seção CSS interna
+
+```css
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Creepster&family=Cinzel:wght@400;600;900&display=swap');
+```
+
+**Linha 8**: Importa 3 fontes do Google Fonts:
+
+- Orbitron (futurista, pesos 400/700/900)
+- Creepster (decorativa)
+- Cinzel (elegante, pesos 400/600/900)
+- display=swap otimiza carregamento
+
+
+```css
+        * {
+```
+
+**Linha 10**: Seletor universal - aplica a todos os elementos
+
+```css
+            margin: 0;
+```
+
+**Linha 11**: Remove margem padrão de todos os elementos
+
+```css
+            padding: 0;
+```
+
+**Linha 12**: Remove padding padrão de todos os elementos
+
+```css
+            box-sizing: border-box;
+```
+
+**Linha 13**: Faz padding e border serem incluídos na largura/altura total
+
+```css
+        }
+```
+
+**Linha 14**: Fecha o seletor universal
+
+```css
+        body {
+```
+
+**Linha 16**: Inicia estilização do elemento body
+
+```css
+            font-family: 'Orbitron', monospace;
+```
+
+**Linha 17**: Define fonte principal como Orbitron, fallback monospace
+
+```css
+            background: #000;
+```
+
+**Linha 18**: Fundo preto sólido
+
+```css
+            color: #fff;
+```
+
+**Linha 19**: Texto branco por padrão
+
+```css
+            overflow-x: hidden;
+```
+
+**Linha 20**: Remove scroll horizontal para evitar barras indesejadas
+
+```css
+            min-height: 100vh;
+```
+
+**Linha 21**: Altura mínima de 100% da viewport (tela cheia)
+
+```css
+            cursor: crosshair;
+```
+
+**Linha 22**: Cursor em formato de mira para tema de jogo
+
+```css
+        }
+```
+
+**Linha 23**: Fecha estilização do body
+
+```css
+        .game-container {
+```
+
+**Linha 25**: Inicia classe do container principal do jogo
+
+```css
+            width: 100vw;
+```
+
+**Linha 26**: Largura de 100% da viewport
+
+```css
+            min-height: 100vh;
+```
+
+**Linha 27**: Altura mínima de 100% da viewport
+
+```css
+            position: relative;
+```
+
+**Linha 28**: Posicionamento relativo para elementos filhos absolutos
+
+```css
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,0,128,0.3) 0%, transparent 50%),
+```
+
+**Linha 29-30**: Primeiro gradiente radial - círculo rosa no canto superior esquerdo
+
+```css
+                radial-gradient(circle at 80% 80%, rgba(0,255,128,0.3) 0%, transparent 50%),
+```
+
+**Linha 31**: Segundo gradiente radial - círculo verde no canto inferior direito
+
+```css
+                radial-gradient(circle at 50% 10%, rgba(128,0,255,0.3) 0%, transparent 50%),
+```
+
+**Linha 32**: Terceiro gradiente radial - círculo roxo no topo central
+
+```css
+                radial-gradient(circle at 10% 90%, rgba(255,128,0,0.3) 0%, transparent 50%),
+```
+
+**Linha 33**: Quarto gradiente radial - círculo laranja no canto inferior esquerdo
+
+```css
+                linear-gradient(135deg, #0a0a0a, #1a0a1a, #0a1a0a, #1a1a0a);
+```
+
+**Linha 34**: Gradiente linear base com tons escuros variados
+
+```css
+            background-size: 400% 400%;
+```
+
+**Linha 35**: Tamanho do background 4x maior para permitir animação
+
+## SEÇÃO 2: ANIMAÇÕES E PARTÍCULAS (Linhas 36-72)
+
+```css
+            animation: cosmicGradient 20s ease infinite;
+```
+
+**Linha 36**: Aplica animação cósmica de 20 segundos, suave, infinita
+
+```css
+        }
+```
+
+**Linha 37**: Fecha classe game-container
+
+```css
+        @keyframes cosmicGradient {
+```
+
+**Linha 39**: Define animação cosmicGradient
+
+```css
+            0%, 100% { background-position: 0% 50%; }
+```
+
+**Linha 40**: No início e fim, background na posição 0% horizontal, 50% vertical
+
+```css
+            25% { background-position: 100% 0%; }
+```
+
+**Linha 41**: Aos 25%, move para 100% horizontal, 0% vertical
+
+```css
+            50% { background-position: 100% 100%; }
+```
+
+**Linha 42**: Aos 50%, move para 100% horizontal, 100% vertical
+
+```css
+            75% { background-position: 0% 100%; }
+```
+
+**Linha 43**: Aos 75%, move para 0% horizontal, 100% vertical
+
+```css
+        }
+```
+
+**Linha 44**: Fecha animação cosmicGradient
+
+```css
+        .particle-system {
+```
+
+**Linha 46**: Inicia classe do sistema de partículas
+
+```css
+            position: fixed;
+```
+
+**Linha 47**: Posição fixa na tela (não move com scroll)
+
+```css
+            top: 0;
+```
+
+**Linha 48**: Alinhado ao topo
+
+```css
+            left: 0;
+```
+
+**Linha 49**: Alinhado à esquerda
+
+```css
+            width: 100%;
+```
+
+**Linha 50**: Largura total da tela
+
+```css
+            height: 100%;
+```
+
+**Linha 51**: Altura total da tela
+
+```css
+            pointer-events: none;
+```
+
+**Linha 52**: Não interfere com cliques (partículas são decorativas)
+
+```css
+            z-index: 1;
+```
+
+**Linha 53**: Camada baixa (atrás de outros elementos)
+
+```css
+        }
+```
+
+**Linha 54**: Fecha classe particle-system
+
+```css
+        .particle {
+```
+
+**Linha 56**: Inicia classe das partículas individuais
+
+```css
+            position: absolute;
+```
+
+**Linha 57**: Posicionamento absoluto dentro do sistema
+
+```css
+            border-radius: 50%;
+```
+
+**Linha 58**: Formato circular
+
+```css
+            animation: particleFloat 15s linear infinite;
+```
+
+**Linha 59**: Animação de flutuação de 15 segundos, linear, infinita
+
+```css
+        }
+```
+
+**Linha 60**: Fecha classe particle
+
+```css
+        @keyframes particleFloat {
+```
+
+**Linha 62**: Define animação particleFloat
+
+```css
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+```
+
+**Linha 63-66**: No início: embaixo da tela, sem movimento horizontal, sem rotação, tamanho 0, invisível
+
+```css
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) translateX(20px) rotate(45deg) scale(1);
+            }
+```
+
+**Linha 67-70**: Aos 10%: visível, sobe um pouco, move 20px à direita, roda 45°, tamanho normal
+
+```css
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) translateX(200px) rotate(315deg) scale(1);
+            }
+```
+
+**Linha 71-74**: Aos 90%: ainda visível, quase no topo, 200px à direita, roda 315°
+
+```css
+            100% {
+                transform: translateY(-10vh) translateX(250px) rotate(360deg) scale(0);
+                opacity: 0;
+            }
+```
+
+**Linha 75-78**: No fim: acima da tela, 250px à direita, rotação completa, tamanho 0, invisível
+
+```css
+        }
+```
+
+**Linha 79**: Fecha animação particleFloat
+
+## SEÇÃO 3: MENU PRINCIPAL (Linhas 81-125)
+
+```css
+        .main-menu {
+```
+
+**Linha 81**: Inicia classe do menu principal
+
+```css
+            display: flex;
+```
+
+**Linha 82**: Layout flexbox
+
+```css
+            flex-direction: column;
+```
+
+**Linha 83**: Direção vertical (elementos empilhados)
+
+```css
+            justify-content: center;
+```
+
+**Linha 84**: Centraliza verticalmente
+
+```css
+            align-items: center;
+```
+
+**Linha 85**: Centraliza horizontalmente
+
+```css
+            min-height: 100vh;
+```
+
+**Linha 86**: Altura mínima de tela cheia
+
+```css
+            text-align: center;
+```
+
+**Linha 87**: Texto centralizado
+
+```css
+            position: relative;
+```
+
+**Linha 88**: Posicionamento relativo
+
+```css
+            background: radial-gradient(ellipse at center, rgba(26,0,51,0.8), rgba(0,0,0,0.9));
+```
+
+**Linha 89**: Fundo com gradiente radial elíptico do centro (roxo escuro para preto)
+
+```css
+            backdrop-filter: blur(10px);
+```
+
+**Linha 90**: Efeito de desfoque no fundo
+
+```css
+        }
+```
+
+**Linha 91**: Fecha classe main-menu
+
+```css
+        .game-title {
+```
+
+**Linha 93**: Inicia classe do título do jogo
+
+```css
+            font-family: 'Cinzel', serif;
+```
+
+**Linha 94**: Fonte Cinzel (elegante, serifada)
+
+```css
+            font-size: clamp(2rem, 8vw, 5rem);
+```
+
+**Linha 95**: Tamanho responsivo: mínimo 2rem, ideal 8% da largura, máximo 5rem
+
+```css
+            font-weight: 900;
+```
+
+**Linha 96**: Peso ultra-negrito
+
+```css
+            background: linear-gradient(45deg, #ff0080, #8000ff, #0080ff, #00ff80, #ff8000);
+```
+
+**Linha 97**: Gradiente linear diagonal com 5 cores (rosa, roxo, azul, verde, laranja)
+
+```css
+            background-size: 400% 400%;
+```
+
+**Linha 98**: Tamanho do gradiente 4x maior para animação
+
+```css
+            -webkit-background-clip: text;
+```
+
+**Linha 99**: Webkit: aplica background apenas no texto
+
+```css
+            -webkit-text-fill-color: transparent;
+```
+
+**Linha 100**: Webkit: torna o texto transparente para mostrar o gradiente
+
+```css
+            background-clip: text;
+```
+
+**Linha 101**: Versão padrão do background-clip
+
+```css
+            animation: epicRainbow 3s ease-in-out infinite;
+```
+
+**Linha 102**: Animação arco-íris de 3 segundos, suave, infinita
+
+```css
+            margin-bottom: 1rem;
+```
+
+**Linha 103**: Margem inferior de 1rem
+
+```css
+            text-shadow: 0 0 50px rgba(255,255,255,0.5);
+```
+
+**Linha 104**: Sombra branca difusa no texto
+
+```css
+            position: relative;
+```
+
+**Linha 105**: Posicionamento relativo para pseudo-elementos
+
+```css
+        }
+```
+
+**Linha 106**: Fecha classe game-title
+
+```css
+        .game-title::before,
+        .game-title::after {
+```
+
+**Linha 108-109**: Seleciona ambos os pseudo-elementos do título
+
+```css
+            content: '🌟';
+```
+
+**Linha 110**: Conteúdo: emoji de estrela
+
+```css
+            position: absolute;
+```
+
+**Linha 111**: Posicionamento absoluto
+
+```css
+            top: 50%;
+```
+
+**Linha 112**: Alinhado ao meio vertical
+
+```css
+            transform: translateY(-50%);
+```
+
+**Linha 113**: Centraliza verticalmente
+
+```css
+            font-size: 2rem;
+```
+
+**Linha 114**: Tamanho da estrela
+
+```css
+            animation: starRotate 4s linear infinite;
+```
+
+**Linha 115**: Animação de rotação de 4 segundos, linear, infinita
+
+```css
+        }
+```
+
+**Linha 116**: Fecha seletor dos pseudo-elementos
+
+```css
+        .game-title::before {
+```
+
+**Linha 118**: Pseudo-elemento before (estrela da esquerda)
+
+```css
+            left: -60px;
+```
+
+**Linha 119**: Posicionado 60px à esquerda do título
+
+```css
+        }
+```
+
+**Linha 120**: Fecha pseudo-elemento before
+
+```css
+        .game-title::after {
+```
+
+**Linha 122**: Pseudo-elemento after (estrela da direita)
+
+```css
+            right: -60px;
+```
+
+**Linha 123**: Posicionado 60px à direita do título
+
+```css
+            animation-direction: reverse;
+```
+
+**Linha 124**: Rotação reversa (sentido anti-horário)
+
+```css
+        }
+```
+
+**Linha 125**: Fecha pseudo-elemento after
+
+## SEÇÃO 4: ANIMAÇÕES DO TÍTULO (Linhas 127-138)
+
+```css
+        @keyframes epicRainbow {
+```
+
+**Linha 127**: Define animação epicRainbow
+
+```css
+            0%, 100% { background-position: 0% 50%; }
+```
+
+**Linha 128**: Início e fim: gradiente na posição inicial
+
+```css
+            50% { background-position: 100% 50%; }
+```
+
+**Linha 129**: Meio: gradiente movido para a direita
+
+```css
+        }
+```
+
+**Linha 130**: Fecha animação epicRainbow
+
+```css
+        @keyframes starRotate {
+```
+
+**Linha 132**: Define animação starRotate
+
+```css
+            from { transform: translateY(-50%) rotate(0deg); }
+```
+
+**Linha 133**: Início: centralizado verticalmente, sem rotação
+
+```css
+            to { transform: translateY(-50%) rotate(360deg); }
+```
+
+**Linha 134**: Fim: centralizado verticalmente, rotação completa
+
+```css
+        }
+```
+
+**Linha 135**: Fecha animação starRotate
+
+## SEÇÃO 5: SUBTÍTULO (Linhas 137-148)
+
+```css
+        .subtitle {
+```
+
+**Linha 137**: Inicia classe do subtítulo
+
+```css
+            font-size: clamp(1rem, 3vw, 1.8rem);
+```
+
+**Linha 138**: Tamanho responsivo: mín 1rem, ideal 3% largura, máx 1.8rem
+
+```css
+            margin-bottom: 3rem;
+```
+
+**Linha 139**: Margem inferior de 3rem
+
+```css
+            background: linear-gradient(45deg, #ff6666, #66ff66, #6666ff);
+```
+
+**Linha 140**: Gradiente com vermelho, verde e azul claros
+
+```css
+            background-size: 200% 200%;
+```
+
+**Linha 141**: Tamanho do gradiente 2x maior para animação
+
+```css
+            -webkit-background-clip: text;
+```
+
+**Linha 142**: Webkit: aplica gradiente apenas no texto
+
+```css
+            -webkit-text-fill-color: transparent;
+```
+
+**Linha 143**: Webkit: texto transparente para mostrar gradiente
+
+```css
+            background-clip: text;
+```
+
+**Linha 144**: Versão padrão do background-clip
+
+```css
+            animation: subtitleGlow 2s ease-in-out infinite;
+```
+
+**Linha 145**: Animação de brilho de 2 segundos, suave, infinita
+
+```css
+        }
+```
+
+**Linha 146**: Fecha classe subtitle
+
+```css
+        @keyframes subtitleGlow {
+```
+
+**Linha 148**: Define animação subtitleGlow
+
+```css
+            0%, 100% { background-position: 0% 50%; }
+```
+
+**Linha 149**: Início e fim: posição inicial do gradiente
+
+```css
+            50% { background-position: 100% 50%; }
+```
+
+**Linha 150**: Meio: gradiente movido para a direita
+
+```css
+        }
+```
+
+**Linha 151**: Fecha animação subtitleGlow
+
+## SEÇÃO 6: BOTÕES DO MENU (Linhas 153-197)
+
+```css
+        .menu-buttons {
+```
+
+**Linha 153**: Inicia classe do container dos botões
+
+```css
+            display: flex;
+```
+
+**Linha 154**: Layout flexbox
+
+```css
+            flex-direction: column;
+```
+
+**Linha 155**: Direção vertical
+
+```css
+            gap: 1.5rem;
+```
+
+**Linha 156**: Espaçamento de 1.5rem entre botões
+
+```css
+            margin-bottom: 2rem;
+```
+
+**Linha 157**: Margem inferior de 2rem
+
+```css
+        }
+```
+
+**Linha 158**: Fecha classe menu-buttons
+
+```css
+        .menu-btn {
+```
+
+**Linha 160**: Inicia classe dos botões do menu
+
+```css
+            padding: 1.5rem 3rem;
+```
+
+**Linha 161**: Padding interno: 1.5rem vertical, 3rem horizontal
+
+```css
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+```
+
+**Linha 162**: Tamanho responsivo: mín 1rem, ideal 2.5% largura, máx 1.4rem
+
+```css
+            font-weight: bold;
+```
+
+**Linha 163**: Texto em negrito
+
+```css
+            background: linear-gradient(45deg, #ff0080, #8000ff, #0080ff);
+```
+
+**Linha 164**: Gradiente diagonal: rosa, roxo, azul
+
+```css
+            background-size: 300% 300%;
+```
+
+**Linha 165**: Tamanho do gradiente 3x maior para animação
+
+```css
+            border: 3px solid transparent;
+```
+
+**Linha 166**: Borda transparente de 3px
+
+```css
+            border-radius: 20px;
+```
+
+**Linha 167**: Bordas arredondadas
+
+```css
+            color: white;
+```
+
+**Linha 168**: Texto branco
+
+```css
+            cursor: pointer;
+```
+
+**Linha 169**: Cursor de ponteiro (clicável)
+
+```css
+            transition: all 0.4s ease;
+```
+
+**Linha 170**: Transição suave de 0.4s para todas as propriedades
+
+```css
+            font-family: inherit;
+```
+
+**Linha 171**: Herda a fonte do elemento pai
+
+```css
+            text-transform: uppercase;
+```
+
+**Linha 172**: Texto em maiúsculas
+
+```css
+            letter-spacing: 2px;
+```
+
+**Linha 173**: Espaçamento entre letras de 2px
+
+```css
+            position: relative;
+```
+
+**Linha 174**: Posicionamento relativo para pseudo-elementos
+
+```css
+            overflow: hidden;
+```
+
+**Linha 175**: Esconde conteúdo que sai dos limites
+
+```css
+            box-shadow: 0 0 30px rgba(255,0,128,0.4);
+```
+
+**Linha 176**: Sombra rosa difusa
+
+```css
+            animation: menuBtnGlow 3s ease-in-out infinite;
+```
+
+**Linha 177**: Animação de brilho de 3 segundos, suave, infinita
+
+```css
+        }
+```
+
+**Linha 178**: Fecha classe menu-btn
+
+```css
+        @keyframes menuBtnGlow {
+```
+
+**Linha 180**: Define animação menuBtnGlow
+
+```css
+            0%, 100% {
+                background-position: 0% 50%;
+                box-shadow: 0 0 30px rgba(255,0,128,0.4);
+            }
+```
+
+**Linha 181-184**: Início e fim: gradiente inicial, sombra rosa
+
+```css
+            50% {
+                background-position: 100% 50%;
+                box-shadow: 0 0 50px rgba(128,0,255,0.6);
+            }
+```
+
+**Linha 185-188**: Meio: gradiente movido, sombra roxa mais intensa
+
+```css
+        }
+```
+
+**Linha 189**: Fecha animação menuBtnGlow
+
+```css
+        .menu-btn::before {
+```
+
+**Linha 191**: Pseudo-elemento before dos botões
+
+```css
+            content: '';
+```
+
+**Linha 192**: Conteúdo vazio
+
+```css
+            position: absolute;
+```
+
+**Linha 193**: Posicionamento absoluto
+
+```css
+            top: 0;
+```
+
+**Linha 194**: Alinhado ao topo
+
+```css
+            left: -100%;
+```
+
+**Linha 195**: Inicialmente fora da tela à esquerda
+
+```css
+            width: 100%;
+```
+
+**Linha 196**: Largura total do botão
+
+```css
+            height: 100%;
+```
+
+**Linha 197**: Altura total do botão
+
+Continuarei com o resto do código. Gostaria que eu prossiga com as próximas seções?
+
+## SEÇÃO 7: EFEITOS DOS BOTÕES (Linhas 198-210)
+
+```css
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+```
+
+**Linha 198**: Gradiente horizontal: transparente → branco semi-transparente → transparente (efeito de brilho)
+
+```css
+            transition: left 0.6s;
+```
+
+**Linha 199**: Transição suave da propriedade left em 0.6 segundos
+
+```css
+        }
+```
+
+**Linha 200**: Fecha pseudo-elemento before
+
+```css
+        .menu-btn:hover::before {
+```
+
+**Linha 202**: Pseudo-elemento before no hover
+
+```css
+            left: 100%;
+```
+
+**Linha 203**: Move o brilho para fora da tela à direita (cria efeito de passagem)
+
+```css
+        }
+```
+
+**Linha 204**: Fecha hover do pseudo-elemento
+
+```css
+        .menu-btn:hover {
+```
+
+**Linha 206**: Estado hover dos botões
+
+```css
+            transform: scale(1.05) translateY(-5px);
+```
+
+**Linha 207**: Aumenta 5% e eleva 5px
+
+```css
+            box-shadow: 0 15px 40px rgba(255,0,128,0.6);
+```
+
+**Linha 208**: Sombra mais intensa e elevada
+
+```css
+            border-color: #fff;
+```
+
+**Linha 209**: Borda fica branca
+
+```css
+        }
+```
+
+**Linha 210**: Fecha hover dos botões
+
+## SEÇÃO 8: SELEÇÃO DE PROFESSORES (Linhas 212-223)
+
+```css
+        .professor-select {
+```
+
+**Linha 212**: Inicia classe da tela de seleção de professores
+
+```css
+            display: none;
+```
+
+**Linha 213**: Inicialmente oculta
+
+```css
+            width: 100%;
+```
+
+**Linha 214**: Largura total
+
+```css
+            min-height: 100vh;
+```
+
+**Linha 215**: Altura mínima de tela cheia
+
+```css
+            position: relative;
+```
+
+**Linha 216**: Posicionamento relativo
+
+```css
+            background: linear-gradient(135deg, rgba(26,0,51,0.9), rgba(51,0,102,0.8));
+```
+
+**Linha 217**: Gradiente diagonal roxo escuro
+
+```css
+            padding: 2rem;
+```
+
+**Linha 218**: Padding interno de 2rem
+
+```css
+            overflow-y: auto;
+```
+
+**Linha 219**: Permite scroll vertical se necessário
+
+```css
+        }
+```
+
+**Linha 220**: Fecha classe professor-select
+
+```css
+        .professor-grid {
+```
+
+**Linha 222**: Inicia classe da grade de professores
+
+```css
+            display: grid;
+```
+
+**Linha 223**: Layout CSS Grid
+
+```css
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+```
+
+**Linha 224**: Colunas responsivas: mínimo 320px, máximo 1 fração, ajuste automático
+
+```css
+            gap: 2rem;
+```
+
+**Linha 225**: Espaçamento de 2rem entre cards
+
+```css
+            max-width: 1400px;
+```
+
+**Linha 226**: Largura máxima de 1400px
+
+```css
+            margin: 0 auto;
+```
+
+**Linha 227**: Centraliza horizontalmente
+
+```css
+            padding: 2rem 0;
+```
+
+**Linha 228**: Padding vertical de 2rem
+
+```css
+        }
+```
+
+**Linha 229**: Fecha classe professor-grid
+
+## SEÇÃO 9: CARDS DOS PROFESSORES (Linhas 231-280)
+
+```css
+        .professor-card {
+```
+
+**Linha 231**: Inicia classe dos cards de professores
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(30,30,30,0.9));
+```
+
+**Linha 232**: Gradiente diagonal escuro
+
+```css
+            border: 3px solid transparent;
+```
+
+**Linha 233**: Borda transparente de 3px
+
+```css
+            border-radius: 20px;
+```
+
+**Linha 234**: Bordas arredondadas
+
+```css
+            padding: 2rem;
+```
+
+**Linha 235**: Padding interno de 2rem
+
+```css
+            cursor: pointer;
+```
+
+**Linha 236**: Cursor de ponteiro
+
+```css
+            transition: all 0.5s ease;
+```
+
+**Linha 237**: Transição suave de 0.5s
+
+```css
+            position: relative;
+```
+
+**Linha 238**: Posicionamento relativo
+
+```css
+            overflow: hidden;
+```
+
+**Linha 239**: Esconde overflow
+
+```css
+            backdrop-filter: blur(15px);
+```
+
+**Linha 240**: Efeito de desfoque no fundo
+
+```css
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+```
+
+**Linha 241**: Sombra preta difusa
+
+```css
+        }
+```
+
+**Linha 242**: Fecha classe professor-card
+
+```css
+        .professor-card::before {
+```
+
+**Linha 244**: Pseudo-elemento before dos cards
+
+```css
+            content: '';
+```
+
+**Linha 245**: Conteúdo vazio
+
+```css
+            position: absolute;
+```
+
+**Linha 246**: Posicionamento absoluto
+
+```css
+            top: 0;
+```
+
+**Linha 247**: Alinhado ao topo
+
+```css
+            left: 0;
+```
+
+**Linha 248**: Alinhado à esquerda
+
+```css
+            right: 0;
+```
+
+**Linha 249**: Alinhado à direita
+
+```css
+            bottom: 0;
+```
+
+**Linha 250**: Alinhado à base (cobre todo o card)
+
+```css
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+```
+
+**Linha 251**: Gradiente de brilho diagonal
+
+```css
+            transform: translateX(-100%);
+```
+
+**Linha 252**: Inicialmente fora da tela à esquerda
+
+```css
+            transition: transform 0.6s;
+```
+
+**Linha 253**: Transição da transformação
+
+```css
+        }
+```
+
+**Linha 254**: Fecha pseudo-elemento before
+
+```css
+        .professor-card:hover::before {
+```
+
+**Linha 256**: Pseudo-elemento before no hover
+
+```css
+            transform: translateX(100%);
+```
+
+**Linha 257**: Move para fora da tela à direita (efeito de brilho passando)
+
+```css
+        }
+```
+
+**Linha 258**: Fecha hover do pseudo-elemento
+
+```css
+        .professor-card:hover {
+```
+
+**Linha 260**: Estado hover dos cards
+
+```css
+            transform: scale(1.05) rotateY(5deg);
+```
+
+**Linha 261**: Aumenta 5% e rotaciona 5° no eixo Y (efeito 3D)
+
+```css
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+```
+
+**Linha 262**: Sombra mais intensa e elevada
+
+```css
+            z-index: 10;
+```
+
+**Linha 263**: Eleva na camada Z (fica por cima)
+
+```css
+        }
+```
+
+**Linha 264**: Fecha hover dos cards
+
+```css
+        .professor-card.unlocked {
+```
+
+**Linha 266**: Cards de professores desbloqueados
+
+```css
+            border-color: #00ff88;
+```
+
+**Linha 267**: Borda verde
+
+```css
+            box-shadow: 0 0 30px rgba(0,255,136,0.4);
+```
+
+**Linha 268**: Sombra verde
+
+```css
+        }
+```
+
+**Linha 269**: Fecha classe unlocked
+
+```css
+        .professor-card.completed {
+```
+
+**Linha 271**: Cards de professores derrotados
+
+```css
+            border-color: #ffaa00;
+```
+
+**Linha 272**: Borda laranja
+
+```css
+            box-shadow: 0 0 40px rgba(255,170,0,0.5);
+```
+
+**Linha 273**: Sombra laranja mais intensa
+
+```css
+            background: linear-gradient(135deg, rgba(255,170,0,0.2), rgba(255,215,0,0.1));
+```
+
+**Linha 274**: Fundo com toque dourado
+
+```css
+        }
+```
+
+**Linha 275**: Fecha classe completed
+
+```css
+        .professor-card.locked {
+```
+
+**Linha 277**: Cards de professores bloqueados
+
+```css
+            opacity: 0.5;
+```
+
+**Linha 278**: Semi-transparente
+
+```css
+            cursor: not-allowed;
+```
+
+**Linha 279**: Cursor de proibido
+
+```css
+            border-color: #666;
+```
+
+**Linha 280**: Borda cinza
+
+```css
+        }
+```
+
+**Linha 281**: Fecha classe locked
+
+## SEÇÃO 10: AVATAR DOS PROFESSORES (Linhas 283-295)
+
+```css
+        .professor-avatar {
+```
+
+**Linha 283**: Inicia classe do avatar dos professores
+
+```css
+            width: 100px;
+```
+
+**Linha 284**: Largura de 100px
+
+```css
+            height: 100px;
+```
+
+**Linha 285**: Altura de 100px (quadrado)
+
+```css
+            border-radius: 50%;
+```
+
+**Linha 286**: Formato circular
+
+```css
+            margin: 0 auto 1rem;
+```
+
+**Linha 287**: Centralizado horizontalmente, margem inferior 1rem
+
+```css
+            display: flex;
+```
+
+**Linha 288**: Layout flexbox
+
+```css
+            align-items: center;
+```
+
+**Linha 289**: Centraliza verticalmente
+
+```css
+            justify-content: center;
+```
+
+**Linha 290**: Centraliza horizontalmente
+
+```css
+            font-size: 3rem;
+```
+
+**Linha 291**: Tamanho do emoji 3rem
+
+```css
+            border: 3px solid;
+```
+
+**Linha 292**: Borda sólida de 3px (cor definida dinamicamente)
+
+```css
+            animation: professorFloat 3s ease-in-out infinite;
+```
+
+**Linha 293**: Animação de flutuação de 3s, suave, infinita
+
+```css
+        }
+```
+
+**Linha 294**: Fecha classe professor-avatar
+
+```css
+        @keyframes professorFloat {
+```
+
+**Linha 296**: Define animação professorFloat
+
+```css
+            0%, 100% { transform: translateY(0px) scale(1); }
+```
+
+**Linha 297**: Início e fim: posição normal, tamanho normal
+
+```css
+            50% { transform: translateY(-10px) scale(1.05); }
+```
+
+**Linha 298**: Meio: sobe 10px, aumenta 5%
+
+```css
+        }
+```
+
+**Linha 299**: Fecha animação professorFloat
+
+## SEÇÃO 11: INFORMAÇÕES DOS PROFESSORES (Linhas 301-340)
+
+```css
+        .professor-name {
+```
+
+**Linha 301**: Inicia classe do nome do professor
+
+```css
+            font-size: 1.5rem;
+```
+
+**Linha 302**: Tamanho da fonte 1.5rem
+
+```css
+            font-weight: bold;
+```
+
+**Linha 303**: Texto em negrito
+
+```css
+            margin-bottom: 0.5rem;
+```
+
+**Linha 304**: Margem inferior 0.5rem
+
+```css
+            text-align: center;
+```
+
+**Linha 305**: Texto centralizado
+
+```css
+        }
+```
+
+**Linha 306**: Fecha classe professor-name
+
+```css
+        .professor-subject {
+```
+
+**Linha 308**: Inicia classe da matéria do professor
+
+```css
+            font-size: 1.1rem;
+```
+
+**Linha 309**: Tamanho da fonte 1.1rem
+
+```css
+            margin-bottom: 1rem;
+```
+
+**Linha 310**: Margem inferior 1rem
+
+```css
+            text-align: center;
+```
+
+**Linha 311**: Texto centralizado
+
+```css
+            font-weight: 600;
+```
+
+**Linha 312**: Peso da fonte semi-negrito
+
+```css
+        }
+```
+
+**Linha 313**: Fecha classe professor-subject
+
+```css
+        .professor-description {
+```
+
+**Linha 315**: Inicia classe da descrição do professor
+
+```css
+            font-size: 0.9rem;
+```
+
+**Linha 316**: Tamanho da fonte 0.9rem (menor)
+
+```css
+            text-align: center;
+```
+
+**Linha 317**: Texto centralizado
+
+```css
+            line-height: 1.4;
+```
+
+**Linha 318**: Altura da linha 1.4 (espaçamento entre linhas)
+
+```css
+            margin-bottom: 1rem;
+```
+
+**Linha 319**: Margem inferior 1rem
+
+```css
+            color: #ccc;
+```
+
+**Linha 320**: Cor cinza claro
+
+```css
+        }
+```
+
+**Linha 321**: Fecha classe professor-description
+
+```css
+        .professor-stats {
+```
+
+**Linha 323**: Inicia classe das estatísticas do professor
+
+```css
+            display: grid;
+```
+
+**Linha 324**: Layout CSS Grid
+
+```css
+            grid-template-columns: repeat(3, 1fr);
+```
+
+**Linha 325**: 3 colunas de tamanho igual
+
+```css
+            gap: 0.5rem;
+```
+
+**Linha 326**: Espaçamento de 0.5rem entre itens
+
+```css
+            margin-bottom: 1rem;
+```
+
+**Linha 327**: Margem inferior 1rem
+
+```css
+        }
+```
+
+**Linha 328**: Fecha classe professor-stats
+
+```css
+        .stat-item {
+```
+
+**Linha 330**: Inicia classe dos itens de estatística
+
+```css
+            text-align: center;
+```
+
+**Linha 331**: Texto centralizado
+
+```css
+            background: rgba(255,255,255,0.1);
+```
+
+**Linha 332**: Fundo branco semi-transparente
+
+```css
+            padding: 0.5rem;
+```
+
+**Linha 333**: Padding interno 0.5rem
+
+```css
+            border-radius: 8px;
+```
+
+**Linha 334**: Bordas arredondadas
+
+```css
+            backdrop-filter: blur(5px);
+```
+
+**Linha 335**: Efeito de desfoque no fundo
+
+```css
+        }
+```
+
+**Linha 336**: Fecha classe stat-item
+
+```css
+        .stat-value {
+```
+
+**Linha 338**: Inicia classe do valor da estatística
+
+```css
+            font-size: 1.2rem;
+```
+
+**Linha 339**: Tamanho da fonte 1.2rem
+
+```css
+            font-weight: bold;
+```
+
+**Linha 340**: Texto em negrito
+
+```css
+            display: block;
+```
+
+**Linha 341**: Exibição em bloco (quebra linha)
+
+```css
+        }
+```
+
+**Linha 342**: Fecha classe stat-value
+
+```css
+        .stat-label {
+```
+
+**Linha 344**: Inicia classe do rótulo da estatística
+
+```css
+            font-size: 0.7rem;
+```
+
+**Linha 345**: Tamanho da fonte pequeno
+
+```css
+            color: #aaa;
+```
+
+**Linha 346**: Cor cinza
+
+```css
+        }
+```
+
+**Linha 347**: Fecha classe stat-label
+
+## SEÇÃO 12: ARENA DE BATALHA (Linhas 349-375)
+
+```css
+        .battle-arena {
+```
+
+**Linha 349**: Inicia classe da arena de batalha
+
+```css
+            display: none;
+```
+
+**Linha 350**: Inicialmente oculta
+
+```css
+            width: 100%;
+```
+
+**Linha 351**: Largura total
+
+```css
+            min-height: 100vh;
+```
+
+**Linha 352**: Altura mínima de tela cheia
+
+```css
+            position: relative;
+```
+
+**Linha 353**: Posicionamento relativo
+
+```css
+            background:
+                radial-gradient(circle at 30% 30%, rgba(255,0,0,0.3) 0%, transparent 50%),
+```
+
+**Linha 354-355**: Gradiente radial vermelho no canto superior esquerdo
+
+```css
+                radial-gradient(circle at 70% 70%, rgba(0,255,0,0.3) 0%, transparent 50%),
+```
+
+**Linha 356**: Gradiente radial verde no canto inferior direito
+
+```css
+                linear-gradient(135deg, #0a0a0a, #1a0a0a, #0a1a0a);
+```
+
+**Linha 357**: Gradiente linear base escuro
+
+```css
+            overflow: hidden;
+```
+
+**Linha 358**: Esconde overflow
+
+```css
+            padding: 1rem;
+```
+
+**Linha 359**: Padding interno 1rem
+
+```css
+        }
+```
+
+**Linha 360**: Fecha classe battle-arena
+
+```css
+        .battle-layout {
+```
+
+**Linha 362**: Inicia classe do layout de batalha
+
+```css
+            display: grid;
+```
+
+**Linha 363**: Layout CSS Grid
+
+```css
+            grid-template-areas:
+                "boss boss"
+                "dialogue dialogue"
+                "player challenge";
+```
+
+**Linha 364-367**: Define áreas nomeadas do grid: boss ocupa 2 colunas no topo, dialogue ocupa 2 colunas no meio, player e challenge dividem a linha inferior
+
+```css
+            grid-template-columns: 1fr 1fr;
+```
+
+**Linha 368**: 2 colunas de tamanho igual
+
+```css
+            grid-template-rows: auto auto 1fr;
+```
+
+**Linha 369**: 3 linhas: 2 automáticas, 1 flexível
+
+```css
+            gap: 1rem;
+```
+
+**Linha 370**: Espaçamento de 1rem entre áreas
+
+```css
+            height: 100vh;
+```
+
+**Linha 371**: Altura de tela cheia
+
+```css
+            max-width: 1200px;
+```
+
+**Linha 372**: Largura máxima 1200px
+
+```css
+            margin: 0 auto;
+```
+
+**Linha 373**: Centralizado horizontalmente
+
+```css
+        }
+```
+
+**Linha 374**: Fecha classe battle-layout
+
+## SEÇÃO 13: PROFESSOR BOSS (Linhas 376-395)
+
+```css
+        .professor-boss {
+```
+
+**Linha 376**: Inicia classe do professor boss
+
+```css
+            grid-area: boss;
+```
+
+**Linha 377**: Ocupa a área "boss" do grid
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(50,0,50,0.8));
+```
+
+**Linha 378**: Gradiente diagonal escuro com toque roxo
+
+```css
+            border: 4px solid;
+```
+
+**Linha 379**: Borda sólida de 4px (cor definida dinamicamente)
+
+```css
+            border-radius: 20px;
+```
+
+**Linha 380**: Bordas arredondadas
+
+```css
+            padding: 2rem;
+```
+
+**Linha 381**: Padding interno 2rem
+
+```css
+            text-align: center;
+```
+
+**Linha 382**: Texto centralizado
+
+```css
+            backdrop-filter: blur(15px);
+```
+
+**Linha 383**: Efeito de desfoque no fundo
+
+```css
+            animation: bossEntrance 4s ease-in-out infinite;
+```
+
+**Linha 384**: Animação de entrada do boss, 4s, suave, infinita
+
+```css
+        }
+```
+
+**Linha 385**: Fecha classe professor-boss
+
+```css
+        @keyframes bossEntrance {
+```
+
+**Linha 387**: Define animação bossEntrance
+
+```css
+            0%, 100% {
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 0 30px currentColor;
+            }
+```
+
+**Linha 388-391**: Início e fim: posição normal, sombra normal
+
+```css
+            50% {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 0 50px currentColor;
+            }
+```
+
+**Linha 392-395**: Meio: sobe 10px, aumenta 2%, sombra mais intensa
+
+```css
+        }
+```
+
+**Linha 396**: Fecha animação bossEntrance
+
+## SEÇÃO 14: AVATAR DO BOSS (Linhas 398-410)
+
+```css
+        .boss-avatar {
+```
+
+**Linha 398**: Inicia classe do avatar do boss
+
+```css
+            width: 120px;
+```
+
+**Linha 399**: Largura 120px
+
+```css
+            height: 120px;
+```
+
+**Linha 400**: Altura 120px
+
+```css
+            border-radius: 50%;
+```
+
+**Linha 401**: Formato circular
+
+```css
+            margin: 0 auto 1rem;
+```
+
+**Linha 402**: Centralizado, margem inferior 1rem
+
+```css
+            display: flex;
+```
+
+**Linha 403**: Layout flexbox
+
+```css
+            align-items: center;
+```
+
+**Linha 404**: Centraliza verticalmente
+
+```css
+            justify-content: center;
+```
+
+**Linha 405**: Centraliza horizontalmente
+
+```css
+            font-size: 4rem;
+```
+
+**Linha 406**: Tamanho do emoji 4rem (maior que o avatar normal)
+
+```css
+            border: 4px solid;
+```
+
+**Linha 407**: Borda sólida de 4px
+
+```css
+            animation: bossAvatarSpin 8s linear infinite;
+```
+
+**Linha 408**: Animação de rotação de 8s, linear, infinita
+
+```css
+        }
+```
+
+**Linha 409**: Fecha classe boss-avatar
+
+```css
+        @keyframes bossAvatarSpin {
+```
+
+**Linha 411**: Define animação bossAvatarSpin
+
+```css
+            from { transform: rotate(0deg); }
+```
+
+**Linha 412**: Início: sem rotação
+
+```css
+            to { transform: rotate(360deg); }
+```
+
+**Linha 413**: Fim: rotação completa
+
+```css
+        }
+```
+
+**Linha 414**: Fecha animação bossAvatarSpin
+
+## SEÇÃO 15: INFORMAÇÕES DO BOSS (Linhas 416-428)
+
+```css
+        .boss-name {
+```
+
+**Linha 416**: Inicia classe do nome do boss
+
+```css
+            font-size: 2rem;
+```
+
+**Linha 417**: Tamanho da fonte 2rem
+
+```css
+            font-weight: 900;
+```
+
+**Linha 418**: Peso ultra-negrito
+
+```css
+            margin-bottom: 0.5rem;
+```
+
+**Linha 419**: Margem inferior 0.5rem
+
+```css
+            font-family: 'Cinzel', serif;
+```
+
+**Linha 420**: Fonte Cinzel (elegante)
+
+```css
+        }
+```
+
+**Linha 421**: Fecha classe boss-name
+
+```css
+        .boss-subject {
+```
+
+**Linha 423**: Inicia classe da matéria do boss
+
+```css
+            font-size: 1.2rem;
+```
+
+**Linha 424**: Tamanho da fonte 1.2rem
+
+```css
+            margin-bottom: 1rem;
+```
+
+**Linha 425**: Margem inferior 1rem
+
+```css
+            font-weight: 600;
+```
+
+**Linha 426**: Peso semi-negrito
+
+```css
+        }
+```
+
+**Linha 427**: Fecha classe boss-subject
+
+## SEÇÃO 16: SISTEMA DE HP (Linhas 429-470)
+
+```css
+        .hp-container {
+```
+
+**Linha 429**: Inicia classe do container de HP
+
+```css
+            margin-bottom: 1rem;
+```
+
+**Linha 430**: Margem inferior 1rem
+
+```css
+        }
+```
+
+**Linha 431**: Fecha classe hp-container
+
+```css
+        .hp-bar {
+```
+
+**Linha 433**: Inicia classe da barra de HP
+
+```css
+            width: 100%;
+```
+
+**Linha 434**: Largura total
+
+```css
+            height: 25px;
+```
+
+**Linha 435**: Altura 25px
+
+```css
+            background: rgba(0,0,0,0.8);
+```
+
+**Linha 436**: Fundo preto semi-transparente
+
+```css
+            border: 3px solid;
+```
+
+**Linha 437**: Borda sólida de 3px
+
+```css
+            border-radius: 15px;
+```
+
+**Linha 438**: Bordas arredondadas
+
+```css
+            overflow: hidden;
+```
+
+**Linha 439**: Esconde overflow
+
+```css
+            position: relative;
+```
+
+**Linha 440**: Posicionamento relativo
+
+```css
+        }
+```
+
+**Linha 441**: Fecha classe hp-bar
+
+```css
+        .hp-fill {
+```
+
+**Linha 443**: Inicia classe do preenchimento da barra de HP
+
+```css
+            height: 100%;
+```
+
+**Linha 444**: Altura total da barra
+
+```css
+            background: linear-gradient(90deg, #ff0000, #ff6600, #ffff00, #00ff00);
+```
+
+**Linha 445**: Gradiente horizontal: vermelho → laranja → amarelo → verde
+
+```css
+            transition: width 1s ease;
+```
+
+**Linha 446**: Transição suave da largura em 1s
+
+```css
+            border-radius: 12px;
+```
+
+**Linha 447**: Bordas arredondadas
+
+```css
+            position: relative;
+```
+
+**Linha 448**: Posicionamento relativo
+
+```css
+        }
+```
+
+**Linha 449**: Fecha classe hp-fill
+
+```css
+        .hp-fill::before {
+```
+
+**Linha 451**: Pseudo-elemento before da barra de HP
+
+```css
+            content: '';
+```
+
+**Linha 452**: Conteúdo vazio
+
+```css
+            position: absolute;
+```
+
+**Linha 453**: Posicionamento absoluto
+
+```css
+            top: 0;
+```
+
+**Linha 454**: Alinhado ao topo
+
+```css
+            left: 0;
+```
+
+**Linha 455**: Alinhado à esquerda
+
+```css
+            width: 100%;
+```
+
+**Linha 456**: Largura total
+
+```css
+            height: 100%;
+```
+
+**Linha 457**: Altura total
+
+```css
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+```
+
+**Linha 458**: Gradiente de brilho horizontal
+
+```css
+            animation: hpShine 2s linear infinite;
+```
+
+**Linha 459**: Animação de brilho de 2s, linear, infinita
+
+```css
+        }
+```
+
+**Linha 460**: Fecha pseudo-elemento before
+
+```css
+        @keyframes hpShine {
+```
+
+**Linha 462**: Define animação hpShine
+
+```css
+            0% { transform: translateX(-100%); }
+```
+
+**Linha 463**: Início: fora da tela à esquerda
+
+```css
+            100% { transform: translateX(100%); }
+```
+
+**Linha 464**: Fim: fora da tela à direita
+
+```css
+        }
+```
+
+**Linha 465**: Fecha animação hpShine
+
+```css
+        .hp-text {
+```
+
+**Linha 467**: Inicia classe do texto de HP
+
+```css
+            position: absolute;
+```
+
+**Linha 468**: Posicionamento absoluto
+
+```css
+            top: 50%;
+```
+
+**Linha 469**: Meio vertical
+
+```css
+            left: 50%;
+```
+
+**Linha 470**: Meio horizontal
+
+```css
+            transform: translate(-50%, -50%);
+```
+
+**Linha 471**: Centraliza perfeitamente
+
+```css
+            font-weight: bold;
+```
+
+**Linha 472**: Texto em negrito
+
+```css
+            color: #fff;
+```
+
+**Linha 473**: Cor branca
+
+```css
+            text-shadow: 2px 2px 4px #000;
+```
+
+**Linha 474**: Sombra preta no texto para legibilidade
+
+```css
+            font-size: 1rem;
+```
+
+**Linha 475**: Tamanho da fonte 1rem
+
+```css
+        }
+```
+
+**Linha 476**: Fecha classe hp-text
+
+## SEÇÃO 17: ÁREA DO JOGADOR (Linhas 478-510)
+
+```css
+        .player-area {
+```
+
+**Linha 478**: Inicia classe da área do jogador
+
+```css
+            grid-area: player;
+```
+
+**Linha 479**: Ocupa a área "player" do grid
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,100,0.8), rgba(0,50,100,0.9));
+```
+
+**Linha 480**: Gradiente diagonal azul
+
+```css
+            border: 4px solid #00aaff;
+```
+
+**Linha 481**: Borda azul sólida
+
+```css
+            border-radius: 20px;
+```
+
+**Linha 482**: Bordas arredondadas
+
+```css
+            padding: 2rem;
+```
+
+**Linha 483**: Padding interno 2rem
+
+```css
+            text-align: center;
+```
+
+**Linha 484**: Texto centralizado
+
+```css
+            backdrop-filter: blur(15px);
+```
+
+**Linha 485**: Efeito de desfoque no fundo
+
+```css
+            box-shadow: 0 0 30px #00aaff;
+```
+
+**Linha 486**: Sombra azul
+
+```css
+            animation: playerPulse 3s ease-in-out infinite;
+```
+
+**Linha 487**: Animação de pulsação de 3s, suave, infinita
+
+```css
+        }
+```
+
+**Linha 488**: Fecha classe player-area
+
+```css
+        @keyframes playerPulse {
+```
+
+**Linha 490**: Define animação playerPulse
+
+```css
+            0%, 100% { transform: scale(1); }
+```
+
+**Linha 491**: Início e fim: tamanho normal
+
+```css
+            50% { transform: scale(1.02); }
+```
+
+**Linha 492**: Meio: aumenta 2%
+
+```css
+        }
+```
+
+**Linha 493**: Fecha animação playerPulse
+
+```css
+        .player-avatar {
+```
+
+**Linha 495**: Inicia classe do avatar do jogador
+
+```css
+            width: 80px;
+```
+
+**Linha 496**: Largura 80px
+
+```css
+            height: 80px;
+```
+
+**Linha 497**: Altura 80px
+
+```css
+            background: linear-gradient(45deg, #00aaff, #0088ff);
+```
+
+**Linha 498**: Gradiente diagonal azul
+
+```css
+            border-radius: 50%;
+```
+
+**Linha 499**: Formato circular
+
+```css
+            display: flex;
+```
+
+**Linha 500**: Layout flexbox
+
+```css
+            align-items: center;
+```
+
+**Linha 501**: Centraliza verticalmente
+
+```css
+            justify-content: center;
+```
+
+**Linha 502**: Centraliza horizontalmente
+
+```css
+            font-size: 2.5rem;
+```
+
+**Linha 503**: Tamanho do emoji 2.5rem
+
+```css
+            margin: 0 auto 1rem;
+```
+
+**Linha 504**: Centralizado, margem inferior 1rem
+
+```css
+            border: 3px solid #00ffff;
+```
+
+**Linha 505**: Borda ciano
+
+```css
+            animation: playerGlow 2s ease-in-out infinite alternate;
+```
+
+**Linha 506**: Animação de brilho de 2s, suave, infinita, alternada
+
+```css
+        }
+```
+
+**Linha 507**: Fecha classe player-avatar
+
+```css
+        @keyframes playerGlow {
+```
+
+**Linha 509**: Define animação playerGlow
+
+```css
+            from { box-shadow: 0 0 15px #00aaff; }
+```
+
+**Linha 510**: Início: sombra azul normal
+
+```css
+            to { box-shadow: 0 0 30px #00aaff, 0 0 45px #00ffff; }
+```
+
+**Linha 511**: Fim: sombra azul dupla mais intensa
+
+```css
+        }
+```
+
+**Linha 512**: Fecha animação playerGlow
+
+## SEÇÃO 18: CONTAINER DE DIÁLOGO (Linhas 514-540)
+
+```css
+        .dialogue-container {
+```
+
+**Linha 514**: Inicia classe do container de diálogo
+
+```css
+            grid-area: dialogue;
+```
+
+**Linha 515**: Ocupa a área "dialogue" do grid
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(20,0,20,0.95));
+```
+
+**Linha 516**: Gradiente diagonal muito escuro
+
+```css
+            border: 4px solid;
+```
+
+**Linha 517**: Borda sólida de 4px (cor definida dinamicamente)
+
+```css
+            border-radius: 20px;
+```
+
+**Linha 518**: Bordas arredondadas
+
+```css
+            padding: 2rem;
+```
+
+**Linha 519**: Padding interno 2rem
+
+```css
+            text-align: center;
+```
+
+**Linha 520**: Texto centralizado
+
+```css
+            backdrop-filter: blur(20px);
+```
+
+**Linha 521**: Efeito de desfoque intenso no fundo
+
+```css
+            animation: dialogueEntrance 0.8s ease-out;
+```
+
+**Linha 522**: Animação de entrada de 0.8s, suave
+
+```css
+        }
+```
+
+**Linha 523**: Fecha classe dialogue-container
+
+```css
+        @keyframes dialogueEntrance {
+```
+
+**Linha 525**: Define animação dialogueEntrance
+
+```css
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+```
+
+**Linha 526-529**: Início: invisível, 90% do tamanho
+
+```css
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+```
+
+**Linha 530-533**: Fim: visível, tamanho normal
+
+```css
+        }
+```
+
+**Linha 534**: Fecha animação dialogueEntrance
+
+```css
+        .dialogue-text {
+```
+
+**Linha 536**: Inicia classe do texto de diálogo
+
+```css
+            font-size: 1.3rem;
+```
+
+**Linha 537**: Tamanho da fonte 1.3rem
+
+```css
+            line-height: 1.6;
+```
+
+**Linha 538**: Altura da linha 1.6
+
+```css
+            margin-bottom: 2rem;
+```
+
+**Linha 539**: Margem inferior 2rem
+
+```css
+            min-height: 80px;
+```
+
+**Linha 540**: Altura mínima 80px
+
+```css
+            display: flex;
+```
+
+**Linha 541**: Layout flexbox
+
+```css
+            align-items: center;
+```
+
+**Linha 542**: Centraliza verticalmente
+
+```css
+            justify-content: center;
+```
+
+**Linha 543**: Centraliza horizontalmente
+
+```css
+            font-weight: 600;
+```
+
+**Linha 544**: Peso semi-negrito
+
+```css
+        }
+```
+
+**Linha 545**: Fecha classe dialogue-text
+
+## SEÇÃO 19: EFEITO DE DIGITAÇÃO (Linhas 547-555)
+
+```css
+        .typing-effect::after {
+```
+
+**Linha 547**: Pseudo-elemento after para efeito de digitação
+
+```css
+            content: '|';
+```
+
+**Linha 548**: Conteúdo: cursor de digitação
+
+```css
+            animation: cursorBlink 1s infinite;
+```
+
+**Linha 549**: Animação de piscar de 1s, infinita
+
+```css
+            color: currentColor;
+```
+
+**Linha 550**: Cor igual ao texto pai
+
+```css
+        }
+```
+
+**Linha 551**: Fecha pseudo-elemento after
+
+```css
+        @keyframes cursorBlink {
+```
+
+**Linha 553**: Define animação cursorBlink
+
+```css
+            0%, 50% { opacity: 1; }
+```
+
+**Linha 554**: 0-50%: visível
+
+```css
+            51%, 100% { opacity: 0; }
+```
+
+**Linha 555**: 51-100%: invisível
+
+```css
+        }
+```
+
+**Linha 556**: Fecha animação cursorBlink
+
+## SEÇÃO 20: ARENA DE DESAFIO (Linhas 558-580)
+
+```css
+        .challenge-arena {
+```
+
+**Linha 558**: Inicia classe da arena de desafio
+
+```css
+            grid-area: challenge;
+```
+
+**Linha 559**: Ocupa a área "challenge" do grid
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(30,0,30,0.9));
+```
+
+**Linha 560**: Gradiente diagonal escuro com toque roxo
+
+```css
+            border: 4px solid #ffaa00;
+```
+
+**Linha 561**: Borda laranja sólida
+
+```css
+            border-radius: 20px;
+```
+
+**Linha 562**: Bordas arredondadas
+
+```css
+            padding: 2rem;
+```
+
+**Linha 563**: Padding interno 2rem
+
+```css
+            backdrop-filter: blur(15px);
+```
+
+**Linha 564**: Efeito de desfoque no fundo
+
+```css
+            box-shadow: 0 0 40px rgba(255,170,0,0.4);
+```
+
+**Linha 565**: Sombra laranja
+
+```css
+            display: none;
+```
+
+**Linha 566**: Inicialmente oculta
+
+```css
+        }
+```
+
+**Linha 567**: Fecha classe challenge-arena
+
+```css
+        .challenge-title {
+```
+
+**Linha 569**: Inicia classe do título do desafio
+
+```css
+            font-size: 1.8rem;
+```
+
+**Linha 570**: Tamanho da fonte 1.8rem
+
+```css
+            color: #ffaa00;
+```
+
+**Linha 571**: Cor laranja
+
+```css
+            text-align: center;
+```
+
+**Linha 572**: Texto centralizado
+
+```css
+            margin-bottom: 1rem;
+```
+
+**Linha 573**: Margem inferior 1rem
+
+```css
+            font-family: 'Cinzel', serif;
+```
+
+**Linha 574**: Fonte Cinzel
+
+```css
+            font-weight: 900;
+```
+
+**Linha 575**: Peso ultra-negrito
+
+```css
+        }
+```
+
+**Linha 576**: Fecha classe challenge-title
+
+## SEÇÃO 21: TIMER DO DESAFIO (Linhas 578-605)
+
+```css
+        .challenge-timer-container {
+```
+
+**Linha 578**: Inicia classe do container do timer
+
+```css
+            margin-bottom: 1.5rem;
+```
+
+**Linha 579**: Margem inferior 1.5rem
+
+```css
+        }
+```
+
+**Linha 580**: Fecha classe challenge-timer-container
+
+```css
+        .challenge-timer {
+```
+
+**Linha 582**: Inicia classe do timer do desafio
+
+```css
+            width: 100%;
+```
+
+**Linha 583**: Largura total
+
+```css
+            height: 20px;
+```
+
+**Linha 584**: Altura 20px
+
+```css
+            background: rgba(0,0,0,0.8);
+```
+
+**Linha 585**: Fundo preto semi-transparente
+
+```css
+            border: 2px solid #ff0000;
+```
+
+**Linha 586**: Borda vermelha
+
+```css
+            border-radius: 10px;
+```
+
+**Linha 587**: Bordas arredondadas
+
+```css
+            overflow: hidden;
+```
+
+**Linha 588**: Esconde overflow
+
+```css
+            position: relative;
+```
+
+**Linha 589**: Posicionamento relativo
+
+```css
+        }
+```
+
+**Linha 590**: Fecha classe challenge-timer
+
+```css
+        .timer-fill {
+```
+
+**Linha 592**: Inicia classe do preenchimento do timer
+
+```css
+            height: 100%;
+```
+
+**Linha 593**: Altura total do timer
+
+```css
+            background: linear-gradient(90deg, #00ff00, #ffff00, #ff6600, #ff0000);
+```
+
+**Linha 594**: Gradiente horizontal: verde → amarelo → laranja → vermelho
+
+```css
+            transition: width 0.1s linear;
+```
+
+**Linha 595**: Transição rápida da largura (0.1s linear)
+
+```css
+            border-radius: 8px;
+```
+
+**Linha 596**: Bordas arredondadas
+
+```css
+        }
+```
+
+**Linha 597**: Fecha classe timer-fill
+
+```css
+        .timer-text {
+```
+
+**Linha 599**: Inicia classe do texto do timer
+
+```css
+            text-align: center;
+```
+
+**Linha 600**: Texto centralizado
+
+```css
+            font-size: 1.1rem;
+```
+
+**Linha 601**: Tamanho da fonte 1.1rem
+
+```css
+            color: #ff6666;
+```
+
+**Linha 602**: Cor vermelha clara
+
+```css
+            margin-top: 0.5rem;
+```
+
+**Linha 603**: Margem superior 0.5rem
+
+```css
+            font-weight: bold;
+```
+
+**Linha 604**: Texto em negrito
+
+```css
+        }
+```
+
+**Linha 605**: Fecha classe timer-text
+
+## SEÇÃO 22: DESAFIO MATEMÁTICO (Linhas 607-650)
+
+```css
+        .math-challenge {
+```
+
+**Linha 607**: Inicia classe do desafio matemático
+
+```css
+            display: flex;
+```
+
+**Linha 608**: Layout flexbox
+
+```css
+            flex-direction: column;
+```
+
+**Linha 609**: Direção vertical
+
+```css
+            gap: 1.5rem;
+```
+
+**Linha 610**: Espaçamento de 1.5rem entre elementos
+
+```css
+        }
+```
+
+**Linha 611**: Fecha classe math-challenge
+
+```css
+        .equation-display {
+```
+
+**Linha 613**: Inicia classe da exibição da equação
+
+```css
+            font-size: 2.5rem;
+```
+
+**Linha 614**: Tamanho da fonte grande (2.5rem)
+
+```css
+            text-align: center;
+```
+
+**Linha 615**: Texto centralizado
+
+```css
+            color: #00ffff;
+```
+
+**Linha 616**: Cor ciano
+
+```css
+            background: linear-gradient(135deg, rgba(0,255,255,0.1), rgba(0,200,255,0.2));
+```
+
+**Linha 617**: Gradiente diagonal ciano semi-transparente
+
+```css
+            padding: 2rem;
+```
+
+**Linha 618**: Padding interno 2rem
+
+```css
+            border-radius: 15px;
+```
+
+**Linha 619**: Bordas arredondadas
+
+```css
+            border: 2px solid #00ffff;
+```
+
+**Linha 620**: Borda ciano
+
+```css
+            font-family: 'Orbitron', monospace;
+```
+
+**Linha 621**: Fonte Orbitron (monospace)
+
+```css
+            font-weight: bold;
+```
+
+**Linha 622**: Texto em negrito
+
+```css
+        }
+```
+
+**Linha 623**: Fecha classe equation-display
+
+```css
+        .answer-section {
+```
+
+**Linha 625**: Inicia classe da seção de resposta
+
+```css
+            display: flex;
+```
+
+**Linha 626**: Layout flexbox
+
+```css
+            flex-direction: column;
+```
+
+**Linha 627**: Direção vertical
+
+```css
+            gap: 1rem;
+```
+
+**Linha 628**: Espaçamento de 1rem entre elementos
+
+```css
+        }
+```
+
+**Linha 629**: Fecha classe answer-section
+
+```css
+        .answer-display {
+```
+
+**Linha 631**: Inicia classe da exibição da resposta
+
+```css
+            font-size: 2rem;
+```
+
+**Linha 632**: Tamanho da fonte 2rem
+
+```css
+            text-align: center;
+```
+
+**Linha 633**: Texto centralizado
+
+```css
+            background: linear-gradient(135deg, #000, #111);
+```
+
+**Linha 634**: Gradiente diagonal escuro
+
+```css
+            color: #00ff00;
+```
+
+**Linha 635**: Cor verde
+
+```css
+            padding: 1rem;
+```
+
+**Linha 636**: Padding interno 1rem
+
+```css
+            border: 2px solid #00ff00;
+```
+
+**Linha 637**: Borda verde
+
+```css
+            border-radius: 10px;
+```
+
+**Linha 638**: Bordas arredondadas
+
+```css
+            font-family: 'Orbitron', monospace;
+```
+
+**Linha 639**: Fonte Orbitron
+
+```css
+            font-weight: bold;
+```
+
+**Linha 640**: Texto em negrito
+
+```css
+        }
+```
+
+**Linha 641**: Fecha classe answer-display
+
+```css
+        .number-grid {
+```
+
+**Linha 643**: Inicia classe da grade de números
+
+```css
+            display: grid;
+```
+
+**Linha 644**: Layout CSS Grid
+
+```css
+            grid-template-columns: repeat(4, 1fr);
+```
+
+**Linha 645**: 4 colunas de tamanho igual
+
+```css
+            gap: 0.5rem;
+```
+
+**Linha 646**: Espaçamento de 0.5rem entre botões
+
+```css
+        }
+```
+
+**Linha 647**: Fecha classe number-grid
+
+```css
+        .number-btn {
+```
+
+**Linha 649**: Inicia classe dos botões numéricos
+
+```css
+            padding: 1rem;
+```
+
+**Linha 650**: Padding interno 1rem
+
+```css
+            font-size: 1.2rem;
+```
+
+**Linha 651**: Tamanho da fonte 1.2rem
+
+```css
+            font-weight: bold;
+```
+
+**Linha 652**: Texto em negrito
+
+```css
+            background: linear-gradient(45deg, #333, #555);
+```
+
+**Linha 653**: Gradiente diagonal cinza
+
+```css
+            border: 2px solid #777;
+```
+
+**Linha 654**: Borda cinza
+
+```css
+            border-radius: 10px;
+```
+
+**Linha 655**: Bordas arredondadas
+
+```css
+            color: white;
+```
+
+**Linha 656**: Texto branco
+
+```css
+            cursor: pointer;
+```
+
+**Linha 657**: Cursor de ponteiro
+
+```css
+            transition: all 0.3s ease;
+```
+
+**Linha 658**: Transição suave de 0.3s
+
+```css
+            font-family: inherit;
+```
+
+**Linha 659**: Herda a fonte
+
+```css
+        }
+```
+
+**Linha 660**: Fecha classe number-btn
+
+```css
+        .number-btn:hover {
+```
+
+**Linha 662**: Estado hover dos botões numéricos
+
+```css
+            background: linear-gradient(45deg, #555, #777);
+```
+
+**Linha 663**: Gradiente mais claro no hover
+
+```css
+            transform: scale(1.05);
+```
+
+**Linha 664**: Aumenta 5%
+
+```css
+            border-color: #fff;
+```
+
+**Linha 665**: Borda fica branca
+
+```css
+        }
+```
+
+**Linha 666**: Fecha hover dos botões numéricos
+
+## SEÇÃO 23: MÚLTIPLA ESCOLHA (Linhas 668-720)
+
+```css
+        .multiple-choice {
+```
+
+**Linha 668**: Inicia classe da múltipla escolha
+
+```css
+            text-align: center;
+```
+
+**Linha 669**: Texto centralizado
+
+```css
+        }
+```
+
+**Linha 670**: Fecha classe multiple-choice
+
+```css
+        .question-text {
+```
+
+**Linha 672**: Inicia classe do texto da pergunta
+
+```css
+            font-size: 1.5rem;
+```
+
+**Linha 673**: Tamanho da fonte 1.5rem
+
+```css
+            margin-bottom: 2rem;
+```
+
+**Linha 674**: Margem inferior 2rem
+
+```css
+            color: #ffff00;
+```
+
+**Linha 675**: Cor amarela
+
+```css
+            line-height: 1.4;
+```
+
+**Linha 676**: Altura da linha 1.4
+
+```css
+            font-weight: 600;
+```
+
+**Linha 677**: Peso semi-negrito
+
+```css
+        }
+```
+
+**Linha 678**: Fecha classe question-text
+
+```css
+        .options-grid {
+```
+
+**Linha 680**: Inicia classe da grade de opções
+
+```css
+            display: grid;
+```
+
+**Linha 681**: Layout CSS Grid
+
+```css
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+```
+
+**Linha 682**: Colunas responsivas: mínimo 200px, ajuste automático
+
+```css
+            gap: 1rem;
+```
+
+**Linha 683**: Espaçamento de 1rem entre opções
+
+```css
+        }
+```
+
+**Linha 684**: Fecha classe options-grid
+
+```css
+        .option-btn {
+```
+
+**Linha 686**: Inicia classe dos botões de opção
+
+```css
+            padding: 1.5rem;
+```
+
+**Linha 687**: Padding interno 1.5rem
+
+```css
+            font-size: 1.1rem;
+```
+
+**Linha 688**: Tamanho da fonte 1.1rem
+
+```css
+            background: linear-gradient(45deg, #660066, #990099);
+```
+
+**Linha 689**: Gradiente diagonal roxo
+
+```css
+            border: 3px solid #ff00ff;
+```
+
+**Linha 690**: Borda magenta
+
+```css
+            border-radius: 15px;
+```
+
+**Linha 691**: Bordas arredondadas
+
+```css
+            color: white;
+```
+
+**Linha 692**: Texto branco
+
+```css
+            cursor: pointer;
+```
+
+**Linha 693**: Cursor de ponteiro
+
+```css
+            transition: all 0.4s ease;
+```
+
+**Linha 694**: Transição suave de 0.4s
+
+```css
+            font-family: inherit;
+```
+
+**Linha 695**: Herda a fonte
+
+```css
+            font-weight: bold;
+```
+
+**Linha 696**: Texto em negrito
+
+```css
+            position: relative;
+```
+
+**Linha 697**: Posicionamento relativo
+
+```css
+            overflow: hidden;
+```
+
+**Linha 698**: Esconde overflow
+
+```css
+        }
+```
+
+**Linha 699**: Fecha classe option-btn
+
+```css
+        .option-btn::before {
+```
+
+**Linha 701**: Pseudo-elemento before dos botões de opção
+
+```css
+            content: '';
+```
+
+**Linha 702**: Conteúdo vazio
+
+```css
+            position: absolute;
+```
+
+**Linha 703**: Posicionamento absoluto
+
+```css
+            top: 0;
+```
+
+**Linha 704**: Alinhado ao topo
+
+```css
+            left: -100%;
+```
+
+**Linha 705**: Inicialmente fora da tela à esquerda
+
+```css
+            width: 100%;
+```
+
+**Linha 706**: Largura total
+
+```css
+            height: 100%;
+```
+
+**Linha 707**: Altura total
+
+```css
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+```
+
+**Linha 708**: Gradiente de brilho horizontal
+
+```css
+            transition: left 0.5s;
+```
+
+**Linha 709**: Transição da propriedade left
+
+```css
+        }
+```
+
+**Linha 710**: Fecha pseudo-elemento before
+
+```css
+        .option-btn:hover::before {
+```
+
+**Linha 712**: Pseudo-elemento before no hover
+
+```css
+            left: 100%;
+```
+
+**Linha 713**: Move para fora da tela à direita
+
+```css
+        }
+```
+
+**Linha 714**: Fecha hover do pseudo-elemento
+
+```css
+        .option-btn:hover {
+```
+
+**Linha 716**: Estado hover dos botões de opção
+
+```css
+            background: linear-gradient(45deg, #990099, #cc00cc);
+```
+
+**Linha 717**: Gradiente mais claro no hover
+
+```css
+            transform: scale(1.05);
+```
+
+**Linha 718**: Aumenta 5%
+
+```css
+        }
+```
+
+**Linha 719**: Fecha hover dos botões de opção
+
+## SEÇÃO 24: ESTADOS DAS OPÇÕES (Linhas 721-745)
+
+```css
+        .option-btn.correct {
+```
+
+**Linha 721**: Botão de opção correta
+
+```css
+            background: linear-gradient(45deg, #006600, #00aa00);
+```
+
+**Linha 722**: Gradiente verde
+
+```css
+            border-color: #00ff00;
+```
+
+**Linha 723**: Borda verde
+
+```css
+            animation: correctAnswer 1s ease;
+```
+
+**Linha 724**: Animação de resposta correta
+
+```css
+        }
+```
+
+**Linha 725**: Fecha classe correct
+
+```css
+        .option-btn.incorrect {
+```
+
+**Linha 727**: Botão de opção incorreta
+
+```css
+            background: linear-gradient(45deg, #660000, #aa0000);
+```
+
+**Linha 728**: Gradiente vermelho
+
+```css
+            border-color: #ff0000;
+```
+
+**Linha 729**: Borda vermelha
+
+```css
+            animation: incorrectAnswer 0.8s ease;
+```
+
+**Linha 730**: Animação de resposta incorreta
+
+```css
+        }
+```
+
+**Linha 731**: Fecha classe incorrect
+
+```css
+        @keyframes correctAnswer {
+```
+
+**Linha 733**: Define animação correctAnswer
+
+```css
+            0%, 100% { transform: scale(1); }
+```
+
+**Linha 734**: Início e fim: tamanho normal
+
+```css
+            50% { transform: scale(1.1); }
+```
+
+**Linha 735**: Meio: aumenta 10%
+
+```css
+        }
+```
+
+**Linha 736**: Fecha animação correctAnswer
+
+```css
+        @keyframes incorrectAnswer {
+```
+
+**Linha 738**: Define animação incorrectAnswer
+
+```css
+            0%, 100% { transform: translateX(0); }
+```
+
+**Linha 739**: Início e fim: posição normal
+
+```css
+            25% { transform: translateX(-10px); }
+```
+
+**Linha 740**: 25%: move 10px à esquerda
+
+```css
+            75% { transform: translateX(10px); }
+```
+
+**Linha 741**: 75%: move 10px à direita (efeito de tremor)
+
+```css
+        }
+```
+
+**Linha 742**: Fecha animação incorrectAnswer
+
+## SEÇÃO 25: EFEITOS DE DANO (Linhas 744-785)
+
+```css
+        .damage-effect {
+```
+
+**Linha 744**: Inicia classe do efeito de dano
+
+```css
+            position: fixed;
+```
+
+**Linha 745**: Posição fixa na tela
+
+```css
+            font-size: 3rem;
+```
+
+**Linha 746**: Tamanho da fonte grande
+
+```css
+            font-weight: 900;
+```
+
+**Linha 747**: Peso ultra-negrito
+
+```css
+            pointer-events: none;
+```
+
+**Linha 748**: Não interfere com cliques
+
+```css
+            animation: damageAnimation 2s ease-out forwards;
+```
+
+**Linha 749**: Animação de dano de 2s, suave, para frente
+
+```css
+            z-index: 1000;
+```
+
+**Linha 750**: Camada alta (por cima de tudo)
+
+```css
+            font-family: 'Cinzel', serif;
+```
+
+**Linha 751**: Fonte Cinzel
+
+```css
+        }
+```
+
+**Linha 752**: Fecha classe damage-effect
+
+```css
+        .damage-player {
+```
+
+**Linha 754**: Dano no jogador
+
+```css
+            color: #ff0000;
+```
+
+**Linha 755**: Cor vermelha
+
+```css
+            text-shadow: 0 0 20px #ff0000;
+```
+
+**Linha 756**: Sombra vermelha brilhante
+
+```css
+        }
+```
+
+**Linha 757**: Fecha classe damage-player
+
+```css
+        .damage-boss {
+```
+
+**Linha 759**: Dano no boss
+
+```css
+            color: #00ff00;
+```
+
+**Linha 760**: Cor verde
+
+```css
+            text-shadow: 0 0 20px #00ff00;
+```
+
+**Linha 761**: Sombra verde brilhante
+
+```css
+        }
+```
+
+**Linha 762**: Fecha classe damage-boss
+
+```css
+        .damage-critical {
+```
+
+**Linha 764**: Dano crítico
+
+```css
+            color: #ffff00;
+```
+
+**Linha 765**: Cor amarela
+
+```css
+            text-shadow: 0 0 30px #ffff00;
+```
+
+**Linha 766**: Sombra amarela mais intensa
+
+```css
+            font-size: 4rem !important;
+```
+
+**Linha 767**: Tamanho maior (4rem) com !important
+
+```css
+        }
+```
+
+**Linha 768**: Fecha classe damage-critical
+
+```css
+        @keyframes damageAnimation {
+```
+
+**Linha 770**: Define animação damageAnimation
+
+```css
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+```
+
+**Linha 771-774**: Início: posição normal, tamanho normal, visível
+
+```css
+            100% {
+                transform: translateY(-100px) scale(1.5);
+                opacity: 0;
+            }
+```
+
+**Linha 775-778**: Fim: sobe 100px, aumenta 50%, invisível
+
+```css
+        }
+```
+
+**Linha 779**: Fecha animação damageAnimation
+
+## SEÇÃO 26: INTERFACE DO JOGO (Linhas 781-815)
+
+```css
+        .game-ui {
+```
+
+**Linha 781**: Inicia classe da interface do jogo
+
+```css
+            position: fixed;
+```
+
+**Linha 782**: Posição fixa na tela
+
+```css
+            top: 1rem;
+```
+
+**Linha 783**: 1rem do topo
+
+```css
+            left: 1rem;
+```
+
+**Linha 784**: 1rem da esquerda
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(30,0,30,0.9));
+```
+
+**Linha 785**: Gradiente diagonal escuro
+
+```css
+            padding: 1rem;
+```
+
+**Linha 786**: Padding interno 1rem
+
+```css
+            border: 2px solid #ffaa00;
+```
+
+**Linha 787**: Borda laranja
+
+```css
+            border-radius: 15px;
+```
+
+**Linha 788**: Bordas arredondadas
+
+```css
+            z-index: 1000;
+```
+
+**Linha 789**: Camada alta
+
+```css
+            backdrop-filter: blur(10px);
+```
+
+**Linha 790**: Efeito de desfoque no fundo
+
+```css
+            box-shadow: 0 0 20px rgba(255,170,0,0.3);
+```
+
+**Linha 791**: Sombra laranja
+
+```css
+        }
+```
+
+**Linha 792**: Fecha classe game-ui
+
+```css
+        .ui-stat {
+```
+
+**Linha 794**: Inicia classe das estatísticas da UI
+
+```css
+            display: flex;
+```
+
+**Linha 795**: Layout flexbox
+
+```css
+            justify-content: space-between;
+```
+
+**Linha 796**: Espaça elementos nas extremidades
+
+```css
+            margin-bottom: 0.5rem;
+```
+
+**Linha 797**: Margem inferior 0.5rem
+
+```css
+            font-size: 0.9rem;
+```
+
+**Linha 798**: Tamanho da fonte pequeno
+
+```css
+            color: #ffaa00;
+```
+
+**Linha 799**: Cor laranja
+
+```css
+            font-weight: bold;
+```
+
+**Linha 800**: Texto em negrito
+
+```css
+            min-width: 200px;
+```
+
+**Linha 801**: Largura mínima 200px
+
+```css
+        }
+```
+
+**Linha 802**: Fecha classe ui-stat
+
+```css
+        .ui-stat-value {
+```
+
+**Linha 804**: Inicia classe do valor da estatística
+
+```css
+            color: #fff;
+```
+
+**Linha 805**: Cor branca
+
+```css
+        }
+```
+
+**Linha 806**: Fecha classe ui-stat-value
+
+## SEÇÃO 27: CONTADOR DE COMBO (Linhas 808-825)
+
+```css
+        .combo-counter {
+```
+
+**Linha 808**: Inicia classe do contador de combo
+
+```css
+            position: fixed;
+```
+
+**Linha 809**: Posição fixa na tela
+
+```css
+            top: 1rem;
+```
+
+**Linha 810**: 1rem do topo
+
+```css
+            right: 1rem;
+```
+
+**Linha 811**: 1rem da direita
+
+```css
+            background: linear-gradient(45deg, #ff0080, #8000ff);
+```
+
+**Linha 812**: Gradiente diagonal rosa-roxo
+
+```css
+            padding: 1rem 1.5rem;
+```
+
+**Linha 813**: Padding interno assimétrico
+
+```css
+            border-radius: 15px;
+```
+
+**Linha 814**: Bordas arredondadas
+
+```css
+            font-size: 1.2rem;
+```
+
+**Linha 815**: Tamanho da fonte 1.2rem
+
+```css
+            font-weight: bold;
+```
+
+**Linha 816**: Texto em negrito
+
+```css
+            color: #fff;
+```
+
+**Linha 817**: Cor branca
+
+```css
+            box-shadow: 0 0 20px rgba(255,0,128,0.4);
+```
+
+**Linha 818**: Sombra rosa
+
+```css
+            z-index: 1000;
+```
+
+**Linha 819**: Camada alta
+
+```css
+            animation: comboPulse 1s ease-in-out infinite;
+```
+
+**Linha 820**: Animação de pulsação de 1s, suave, infinita
+
+```css
+        }
+```
+
+**Linha 821**: Fecha classe combo-counter
+
+```css
+        @keyframes comboPulse {
+```
+
+**Linha 823**: Define animação comboPulse
+
+```css
+            0%, 100% { transform: scale(1); }
+```
+
+**Linha 824**: Início e fim: tamanho normal
+
+```css
+            50% { transform: scale(1.05); }
+```
+
+**Linha 825**: Meio: aumenta 5%
+
+```css
+        }
+```
+
+**Linha 826**: Fecha animação comboPulse
+
+## SEÇÃO 28: BOTÃO VOLTAR (Linhas 828-845)
+
+```css
+        .back-btn {
+```
+
+**Linha 828**: Inicia classe do botão voltar
+
+```css
+            position: fixed;
+```
+
+**Linha 829**: Posição fixa na tela
+
+```css
+            bottom: 1rem;
+```
+
+**Linha 830**: 1rem da base
+
+```css
+            left: 1rem;
+```
+
+**Linha 831**: 1rem da esquerda
+
+```css
+            padding: 0.8rem 1.5rem;
+```
+
+**Linha 832**: Padding interno
+
+```css
+            background: linear-gradient(45deg, #ff0000, #cc0000);
+```
+
+**Linha 833**: Gradiente diagonal vermelho
+
+```css
+            border: 2px solid #ff0000;
+```
+
+**Linha 834**: Borda vermelha
+
+```css
+            border-radius: 10px;
+```
+
+**Linha 835**: Bordas arredondadas
+
+```css
+            color: white;
+```
+
+**Linha 836**: Texto branco
+
+```css
+            cursor: pointer;
+```
+
+**Linha 837**: Cursor de ponteiro
+
+```css
+            font-family: inherit;
+```
+
+**Linha 838**: Herda a fonte
+
+```css
+            font-weight: bold;
+```
+
+**Linha 839**: Texto em negrito
+
+```css
+            font-size: 1rem;
+```
+
+**Linha 840**: Tamanho da fonte 1rem
+
+```css
+            transition: all 0.3s ease;
+```
+
+**Linha 841**: Transição suave de 0.3s
+
+```css
+            z-index: 1000;
+```
+
+**Linha 842**: Camada alta
+
+```css
+        }
+```
+
+**Linha 843**: Fecha classe back-btn
+
+```css
+        .back-btn:hover {
+```
+
+**Linha 845**: Estado hover do botão voltar
+
+```css
+            background: linear-gradient(45deg, #cc0000, #990000);
+```
+
+**Linha 846**: Gradiente mais escuro no hover
+
+```css
+            transform: scale(1.05);
+```
+
+**Linha 847**: Aumenta 5%
+
+```css
+        }
+```
+
+**Linha 848**: Fecha hover do botão voltar
+
+## SEÇÃO 29: TELA DE RESULTADO (Linhas 850-890)
+
+```css
+        .result-screen {
+```
+
+**Linha 850**: Inicia classe da tela de resultado
+
+```css
+            position: fixed;
+```
+
+**Linha 851**: Posição fixa na tela
+
+```css
+            top: 0;
+```
+
+**Linha 852**: Alinhado ao topo
+
+```css
+            left: 0;
+```
+
+**Linha 853**: Alinhado à esquerda
+
+```css
+            width: 100%;
+```
+
+**Linha 854**: Largura total
+
+```css
+            height: 100%;
+```
+
+**Linha 855**: Altura total
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(20,0,20,0.95));
+```
+
+**Linha 856**: Gradiente diagonal muito escuro
+
+```css
+            display: none;
+```
+
+**Linha 857**: Inicialmente oculta
+
+```css
+            justify-content: center;
+```
+
+**Linha 858**: Centraliza horizontalmente
+
+```css
+            align-items: center;
+```
+
+**Linha 859**: Centraliza verticalmente
+
+```css
+            flex-direction: column;
+```
+
+**Linha 860**: Direção vertical
+
+```css
+            z-index: 2000;
+```
+
+**Linha 861**: Camada muito alta
+
+```css
+            backdrop-filter: blur(20px);
+```
+
+**Linha 862**: Efeito de desfoque intenso no fundo
+
+```css
+        }
+```
+
+**Linha 863**: Fecha classe result-screen
+
+```css
+        .result-content {
+```
+
+**Linha 865**: Inicia classe do conteúdo do resultado
+
+```css
+            text-align: center;
+```
+
+**Linha 866**: Texto centralizado
+
+```css
+            background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(30,0,30,0.9));
+```
+
+**Linha 867**: Gradiente diagonal escuro
+
+```css
+            padding: 3rem;
+```
+
+**Linha 868**: Padding interno grande
+
+```css
+            border-radius: 30px;
+```
+
+**Linha 869**: Bordas muito arredondadas
+
+```css
+            border: 4px solid;
+```
+
+**Linha 870**: Borda sólida de 4px (cor definida dinamicamente)
+
+```css
+            backdrop-filter: blur(15px);
+```
+
+**Linha 871**: Efeito de desfoque no fundo
+
+```css
+            max-width: 600px;
+```
+
+**Linha 872**: Largura máxima 600px
+
+```css
+            width: 90%;
+```
+
+**Linha 873**: Largura 90% da tela
+
+```css
+        }
+```
+
+**Linha 874**: Fecha classe result-content
+
+```css
+        .result-title {
+```
+
+**Linha 876**: Inicia classe do título do resultado
+
+```css
+            font-family: 'Cinzel', serif;
+```
+
+**Linha 877**: Fonte Cinzel
+
+```css
+            font-size: 3rem;
+```
+
+**Linha 878**: Tamanho da fonte grande
+
+```css
+            font-weight: 900;
+```
+
+**Linha 879**: Peso ultra-negrito
+
+```css
+            margin-bottom: 2rem;
+```
+
+**Linha 880**: Margem inferior 2rem
+
+```css
+            animation: resultGlow 2s ease-in-out infinite alternate;
+```
+
+**Linha 881**: Animação de brilho de 2s, suave, infinita, alternada
+
+```css
+        }
+```
+
+**Linha 882**: Fecha classe result-title
+
+```css
+        .victory-title {
+```
+
+**Linha 884**: Título de vitória
+
+```css
+            color: #00ff00;
+```
+
+**Linha 885**: Cor verde
+
+```css
+            border-color: #00ff00;
+```
+
+**Linha 886**: Borda verde
+
+```css
+        }
+```
+
+**Linha 887**: Fecha classe victory-title
+
+```css
+        .defeat-title {
+```
+
+**Linha 889**: Título de derrota
+
+```css
+            color: #ff0000;
+```
+
+**Linha 890**: Cor vermelha
+
+```css
+            border-color: #ff0000;
+```
+
+**Linha 891**: Borda vermelha
+
+```css
+        }
+```
+
+**Linha 892**: Fecha classe defeat-title
+
+```css
+        @keyframes resultGlow {
+```
+
+**Linha 894**: Define animação resultGlow
+
+```css
+            from { text-shadow: 0 0 20px currentColor; }
+```
+
+**Linha 895**: Início: sombra normal
+
+```css
+            to { text-shadow: 0 0 40px currentColor; }
+```
+
+**Linha 896**: Fim: sombra mais intensa
+
+```css
+        }
+```
+
+**Linha 897**: Fecha animação resultGlow
+
+## SEÇÃO 30: MENSAGEM E ESTATÍSTICAS DO RESULTADO (Linhas 899-935)
+
+```css
+        .result-message {
+```
+
+**Linha 899**: Inicia classe da mensagem do resultado
+
+```css
+            font-size: 1.3rem;
+```
+
+**Linha 900**: Tamanho da fonte 1.3rem
+
+```css
+            margin-bottom: 2rem;
+```
+
+**Linha 901**: Margem inferior 2rem
+
+```css
+            line-height: 1.5;
+```
+
+**Linha 902**: Altura da linha 1.5
+
+```css
+            color: #ccc;
+```
+
+**Linha 903**: Cor cinza claro
+
+```css
+        }
+```
+
+**Linha 904**: Fecha classe result-message
+
+```css
+        .result-stats {
+```
+
+**Linha 906**: Inicia classe das estatísticas do resultado
+
+```css
+            display: grid;
+```
+
+**Linha 907**: Layout CSS Grid
+
+```css
+            grid-template-columns: repeat(3, 1fr);
+```
+
+**Linha 908**: 3 colunas de tamanho igual
+
+```css
+            gap: 1rem;
+```
+
+**Linha 909**: Espaçamento de 1rem entre itens
+
+```css
+            margin-bottom: 2rem;
+```
+
+**Linha 910**: Margem inferior 2rem
+
+```css
+        }
+```
+
+**Linha 911**: Fecha classe result-stats
+
+```css
+        .result-stat {
+```
+
+**Linha 913**: Inicia classe do item de estatística do resultado
+
+```css
+            background: rgba(255,255,255,0.1);
+```
+
+**Linha 914**: Fundo branco semi-transparente
+
+```css
+            padding: 1rem;
+```
+
+**Linha 915**: Padding interno 1rem
+
+```css
+            border-radius: 10px;
+```
+
+**Linha 916**: Bordas arredondadas
+
+```css
+            backdrop-filter: blur(5px);
+```
+
+**Linha 917**: Efeito de desfoque no fundo
+
+```css
+        }
+```
+
+**Linha 918**: Fecha classe result-stat
+
+```css
+        .result-stat-value {
+```
+
+**Linha 920**: Inicia classe do valor da estatística do resultado
+
+```css
+            font-size: 2rem;
+```
+
+**Linha 921**: Tamanho da fonte grande
+
+```css
+            font-weight: bold;
+```
+
+**Linha 922**: Texto em negrito
+
+```css
+            color: #ffaa00;
+```
+
+**Linha 923**: Cor laranja
+
+```css
+            display: block;
+```
+
+**Linha 924**: Exibição em bloco
+
+```css
+            margin-bottom: 0.5rem;
+```
+
+**Linha 925**: Margem inferior 0.5rem
+
+```css
+        }
+```
+
+**Linha 926**: Fecha classe result-stat-value
+
+```css
+        .result-stat-label {
+```
+
+**Linha 928**: Inicia classe do rótulo da estatística do resultado
+
+```css
+            font-size: 0.9rem;
+```
+
+**Linha 929**: Tamanho da fonte pequeno
+
+```css
+            color: #aaa;
+```
+
+**Linha 930**: Cor cinza
+
+```css
+        }
+```
+
+**Linha 931**: Fecha classe result-stat-label
+
+## SEÇÃO 31: RESPONSIVIDADE (Linhas 933-970)
+
+```css
+        @media (max-width: 768px) {
+```
+
+**Linha 933**: Media query para telas menores que 768px
+
+```css
+            .battle-layout {
+                grid-template-areas:
+                    "boss"
+                    "dialogue"
+                    "player"
+                    "challenge";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto 1fr;
+            }
+```
+
+**Linha 934-941**: Layout de batalha em coluna única para mobile
+
+```css
+            .professor-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+```
+
+**Linha 943-946**: Grade de professores em coluna única para mobile
+
+```css
+            .game-title::before,
+            .game-title::after {
+                display: none;
+            }
+```
+
+**Linha 948-951**: Esconde estrelas do título em mobile
+
+```css
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+```
+
+**Linha 953-955**: Grade de opções em coluna única para mobile
+
+```css
+            .number-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+```
+
+**Linha 957-959**: Grade de números com 3 colunas para mobile
+
+```css
+            .result-stats {
+                grid-template-columns: 1fr;
+            }
+```
+
+**Linha 961-963**: Estatísticas do resultado em coluna única para mobile
+
+```css
+        }
+```
+
+**Linha 964**: Fecha media query
+
+## SEÇÃO 32: CLASSES UTILITÁRIAS (Linhas 966-970)
+
+```css
+        .hidden { display: none !important; }
+```
+
+**Linha 966**: Classe para esconder elementos com !important
+
+```css
+        .show { display: block !important; }
+```
+
+**Linha 967**: Classe para mostrar elementos em bloco com !important
+
+```css
+        .show-flex { display: flex !important; }
+```
+
+**Linha 968**: Classe para mostrar elementos em flex com !important
+
+```css
+    </style>
+```
+
+**Linha 969**: Fecha a seção de estilos CSS
+
+```css
+</head>
+```
+
+**Linha 970**: Fecha a seção head do HTML
+
+## SEÇÃO 33: INÍCIO DO BODY E ESTRUTURA HTML (Linhas 971-1000)
+
+```html
+<body>
+```
+
+**Linha 971**: Inicia o elemento body
+
+```html
+    <div class="game-container">
+```
+
+**Linha 972**: Container principal do jogo
+
+```html
+        <div class="particle-system" id="particleSystem"></div>
+```
+
+**Linha 973**: Sistema de partículas com ID para manipulação JavaScript
+
+```html
+        <div id="mainMenu" class="main-menu">
+```
+
+**Linha 975**: Menu principal com ID
+
+```html
+            <h1 class="game-title">ACADEMIA DOS MESTRES SUPREMOS</h1>
+```
+
+**Linha 976**: Título principal do jogo
+
+```html
+            <p class="subtitle">EDIÇÃO DEFINITIVA - CONFRONTO ÉPICO</p>
+```
+
+**Linha 977**: Subtítulo do jogo
+
+```html
+            <div class="menu-buttons">
+```
+
+**Linha 978**: Container dos botões do menu
+
+```html
+                <button class="menu-btn" onclick="showProfessorSelect()">⚔️ ENTRAR NA ARENA SUPREMA</button>
+```
+
+**Linha 979**: Botão para entrar na seleção de professores
+
+```html
+                <button class="menu-btn" onclick="showInstructions()">📜 MANUAL DO GUERREIRO</button>
+```
+
+**Linha 980**: Botão para mostrar instruções
+
+```html
+                <button class="menu-btn" onclick="showHallOfFame()">🏆 HALL DA FAMA ÉPICO</button>
+```
+
+**Linha 981**: Botão para mostrar hall da fama
+
+```html
+                <button class="menu-btn" onclick="resetAllProgress()">💀 RESETAR UNIVERSO</button>
+```
+
+**Linha 982**: Botão para resetar progresso
+
+```html
+            </div>
+```
+
+**Linha 983**: Fecha container dos botões
+
+```html
+        </div>
+```
+
+**Linha 984**: Fecha menu principal
+
+```html
+        <div id="professorSelect" class="professor-select">
+```
+
+**Linha 986**: Tela de seleção de professores
+
+```html
+            <button class="back-btn" onclick="showMainMenu()">← FUGIR DA ACADEMIA</button>
+```
+
+**Linha 987**: Botão para voltar ao menu principal
+
+```html
+            <div class="game-ui">
+```
+
+**Linha 989**: Interface do jogo (estatísticas)
+
+```html
+                <div class="ui-stat">
+                    <span>🎓 Nível:</span>
+                    <span class="ui-stat-value" id="playerLevel">1</span>
+                </div>
+```
+
+**Linha 990-993**: Estatística do nível do jogador
+
+```html
+                <div class="ui-stat">
+                    <span>⚡ Poder:</span>
+                    <span class="ui-stat-value" id="playerPower">100</span>
+                </div>
+```
+
+**Linha 994-997**: Estatística do poder do jogador
+
+```html
+                <div class="ui-stat">
+                    <span>🏆 Vitórias:</span>
+                    <span class="ui-stat-value" id="victories">0/15</span>
+                </div>
+```
+
+**Linha 998-1001**: Estatística das vitórias
+
+```html
+                <div class="ui-stat">
+                    <span>💀 Derrotas:</span>
+                    <span class="ui-stat-value" id="defeats">0</span>
+                </div>
+```
+
+**Linha 1002-1005**: Estatística das derrotas
+
+```html
+                <div class="ui-stat">
+                    <span>🔥 Combo Max:</span>
+                    <span class="ui-stat-value" id="maxCombo">0</span>
+                </div>
+```
+
+**Linha 1006-1009**: Estatística do combo máximo
+
+```html
+            </div>
+```
+
+**Linha 1010**: Fecha interface do jogo
+
+.
